@@ -1,0 +1,2 @@
+-e git+https://github.com/digital-land/govuk-jinja-components.git#egg=govuk_jinja_components
+jinja2==2.11.2
