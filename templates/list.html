@@ -7,6 +7,12 @@
 	<div class="govuk-grid-column-full">
   	<h1 class="govuk-heading-xl">Local plans</h1>
     </div>
+
+    <ul class="govuk-list govuk-grid-column-two-thirds">
+        {% for plan in data %}
+        <li>{{ plan['name'] }}</li>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}
 
