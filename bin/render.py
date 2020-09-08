@@ -4,6 +4,7 @@ import os
 import jinja2
 
 from local_plans_data import get_local_plan_data
+from organisation import get_organisation_data, get_boundaries
 from jinja_filters import map_organisation_id_filter, statistical_geography_code
 
 docs = "docs/"
@@ -38,9 +39,17 @@ plan_template = env.get_template("plan.html")
 
 # get the data
 plan_data = get_local_plan_data()
+organisations = get_organisation_data()
 
 # generate the pages
 render("local-plan/index.html", list_template, data=plan_data)
 
 for plan in plan_data:
-    render(f"local-plan/{plan['development-plan']}/index.html", plan_template, plan=plan)
+    plan_organisations = plan['organisations'].split(';')
+    boundaries = get_boundaries(organisations, plan_organisations)
+
+    render(
+        f"local-plan/{plan['development-plan']}/index.html",
+        plan_template,
+        plan=plan,
+        boundaries=boundaries)

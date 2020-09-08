@@ -191,7 +191,7 @@
         </div>
       {% endif %}
       {%- set geographies = plan['geographies'].split(';') -%}
-      <p class="govuk-body">ONS statistical geography code{% if geographies|length > 1 %}s{% endif %}: 
+      <p class="govuk-body govuk-!-margin-top-2">ONS statistical geography code{% if geographies|length > 1 %}s{% endif %}: 
       {% for geog in geographies %}
       <a href="http://statistics.data.gov.uk/id/statistical-geography/{{geog}}">{{geog|statistical_geography_code}}</a>
       {% if not loop.last %}, {% endif %}
