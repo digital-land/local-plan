@@ -4,7 +4,7 @@ import os
 import jinja2
 
 from local_plans_data import get_local_plan_data
-from jinja_filters import map_organisation_id_filter
+from jinja_filters import map_organisation_id_filter, statistical_geography_code
 
 docs = "docs/"
 static_path = "https://digital-land.github.io" # use frontend assets we have published
@@ -30,6 +30,7 @@ env = jinja2.Environment(loader=multi_loader)
 
 # register jinja filters
 env.filters['map_organisation_by_id'] = map_organisation_id_filter
+env.filters['statistical_geography_code'] = statistical_geography_code
 
 # get page template
 list_template = env.get_template("list.html")
