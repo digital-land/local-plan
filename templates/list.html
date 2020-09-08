@@ -10,7 +10,7 @@
 
     <ul class="govuk-list govuk-grid-column-two-thirds">
         {% for plan in data %}
-        <li>{{ plan['name'] }}</li>
+        <li><a href="/local-plan/{{ plan['development-plan'] }}" class="govuk-link">{{ plan['name'] }}</a></li>
         {% endfor %}
     </ul>
 </div>
