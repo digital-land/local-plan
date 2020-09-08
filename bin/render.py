@@ -8,14 +8,14 @@ from local_plans_data import get_local_plan_data
 docs = "docs/"
 static_path = "https://digital-land.github.io" # use frontend assets we have published
 
-def render(path, template, data, **kwargs):
+def render(path, template, **kwargs):
     path = os.path.join(docs, path)
     directory = os.path.dirname(path)
     if not os.path.exists(directory):
         os.makedirs(directory)
 
     with open(path, "w") as f:
-        f.write(template.render(data=data, staticPath=static_path, **kwargs))
+        f.write(template.render(staticPath=static_path, **kwargs))
 
 
 # register templates
@@ -29,9 +29,13 @@ env = jinja2.Environment(loader=multi_loader)
 
 # get page template
 list_template = env.get_template("list.html")
+plan_template = env.get_template("plan.html")
 
 # get the data
 plan_data = get_local_plan_data()
 
 # generate the pages
-render("local-plan/index.html", list_template, plan_data)
+render("local-plan/index.html", list_template, data=plan_data)
+
+for plan in plan_data:
+    render(f"local-plan/{plan['development-plan']}/index.html", plan_template, plan=plan)
