@@ -54,9 +54,11 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-full">
         <span class="govuk-caption-xl">Local plan</span>
-        <h1 class="govuk-heading-xl">{% if plan["name"] %}{{plan["name"]}}{% else %}{{plan["development-plan"]}}{% endif %}</h1>
+        <h1 class="govuk-heading-xl">
+            {% if plan["name"] %}{{plan["name"]}}{% else %}{{plan["development-plan"]}}{% endif %}
+        </h1>
     </div>
 </div>
 
@@ -65,108 +67,113 @@
         <div class="contents-section">
             <p>Contents</p>
             <ul>
-              <li><a href="#details">Details</a></li>
-              <li><a href="#area-covered">Area covered</a></li>
-              <li><a href="#associated-documents">Associated documents</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#area-covered">Area covered</a></li>
+                <li><a href="#associated-documents">Associated documents</a></li>
             </ul>
-          </div>
-    </div>
-  <div class="govuk-grid-column-two-thirds">
-
-    <dl id="details" class="govuk-summary-list govuk-!-margin-bottom-0">
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Type
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <!--{{plan["development-plan-type"]}}-->
-          Local plan
-        </dd>
-      </div>
-
-      {% if plan["organisations"] %}
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Creators
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {%- set organisations = plan['organisations'].split(';') -%}
-          {% for org in organisations %}
-          <a href="https://digital-land.github.io/organisation/{{ org|replace(':', '/') }}" class="govuk-link">{{ org }}</a>
-            {% if not loop.last %}<br />{% endif %}
-          {% endfor %}
-        </dd>
-      </div>
-      {% endif %}
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Description
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{plan["description"]}}
-        </dd>
-      </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Notes
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{plan["notes"]}}
-        </dd>
-      </div>
-
-
-
-      <div class="govuk-summary-list__row adopted-plan">
-        <dt class="govuk-summary-list__key" style="border: none;">
-          Timeline
-        </dt>
-        <dd class="govuk-summary-list__value" style="border: none;">
-      <div class="lp-pins-stages govuk-!-margin-bottom-8">
-                    
-        <div class="lp-current-stage">
-            <span class="lp-stage-tag">adopted</span>
-            <span class="lp-stage-date">14 Dec 2017</span>
         </div>
-        <details class="govuk-details" role="group">
-            <summary class="govuk-details__summary" role="button" aria-controls="details-content-a04329e1-9578-4f14-b979-529177b6985c" aria-expanded="false">
-<span class="govuk-details__summary-text">
-PINS Timeline
-</span>
-            </summary>
-            <div class="govuk-details__text" id="details-content-a04329e1-9578-4f14-b979-529177b6985c" aria-hidden="true">
-                <table class="govuk-table">
-                    <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                            <th class="govuk-table__cell" scope="row">published</th>
-                            <td class="govuk-table__cell">31 Mar 2016</td>
-                        </tr><tr class="govuk-table__row">
-                            <th class="govuk-table__cell" scope="row">submitted</th>
-                            <td class="govuk-table__cell">20 Oct 2016</td>
-                        </tr><tr class="govuk-table__row">
-                            <th class="govuk-table__cell" scope="row">sound</th>
-                            <td class="govuk-table__cell">29 Sep 2017</td>
-                        </tr><tr class="govuk-table__row">
-                            <th class="govuk-table__cell" scope="row">adopted</th>
-                            <td class="govuk-table__cell">14 Dec 2017</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-            </div>
-        </details>
     </div>
-  </dd>
-</div>
+    <div class="govuk-grid-column-two-thirds">
+
+        <dl id="details" class="govuk-summary-list govuk-!-margin-bottom-0">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <!--{{plan["development-plan-type"]}}-->
+                    Local plan
+                </dd>
+            </div>
+
+            {% if plan["organisations"] %}
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Creators
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {%- set organisations = plan['organisations'].split(';') -%}
+                    {% for org in organisations %}
+                    <a href="https://digital-land.github.io/organisation/{{ org|replace(':', '/') }}"
+                        class="govuk-link">{{ org|map_organisation_by_id }}</a>
+                    {% if not loop.last %}<br />{% endif %}
+                    {% endfor %}
+                </dd>
+            </div>
+            {% endif %}
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Description
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{plan["description"]}}
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Notes
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{plan["notes"]}}
+                </dd>
+            </div>
 
 
 
-    </dl>
+            <div class="govuk-summary-list__row adopted-plan">
+                <dt class="govuk-summary-list__key" style="border: none;">
+                    Timeline
+                </dt>
+                <dd class="govuk-summary-list__value" style="border: none;">
+                    <div class="lp-pins-stages govuk-!-margin-bottom-8">
 
-  </div>
+                        <div class="lp-current-stage">
+                            <span class="lp-stage-tag">adopted</span>
+                            <span class="lp-stage-date">14 Dec 2017</span>
+                        </div>
+                        <details class="govuk-details" role="group">
+                            <summary class="govuk-details__summary" role="button"
+                                aria-controls="details-content-a04329e1-9578-4f14-b979-529177b6985c"
+                                aria-expanded="false">
+                                <span class="govuk-details__summary-text">
+                                    PINS Timeline
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text"
+                                id="details-content-a04329e1-9578-4f14-b979-529177b6985c"
+                                aria-hidden="true">
+                                <table class="govuk-table">
+                                    <tbody class="govuk-table__body">
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__cell" scope="row">published</th>
+                                            <td class="govuk-table__cell">31 Mar 2016</td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__cell" scope="row">submitted</th>
+                                            <td class="govuk-table__cell">20 Oct 2016</td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__cell" scope="row">sound</th>
+                                            <td class="govuk-table__cell">29 Sep 2017</td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__cell" scope="row">adopted</th>
+                                            <td class="govuk-table__cell">14 Dec 2017</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </details>
+                    </div>
+                </dd>
+            </div>
+        </dl>
+
+    </div>
 </div>
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -210,7 +217,7 @@ PINS Timeline
           </div>
           <div class="govuk-grid-column-two-thirds">
             <h3 class="govuk-heading-s govuk-!-margin-bottom-1">{{ doc["name"]}}</h3>
-            <p class="govuk-body">Owner: <a href="https://digital-land.github.io/organisation/{{ org|replace(':', '/') }}" class="govuk-link">{{ doc['organisation'] }}</a></p>
+            <p class="govuk-body">Owner: <a href="https://digital-land.github.io/organisation/{{ org|replace(':', '/') }}" class="govuk-link">{{ doc['organisation']|map_organisation_by_id }}</a></p>
             {% if doc['description'] %}<p class="govuk-body">{{ doc['description'] }}</p>{% endif %}
             {% if doc['notes'] %}<p class="govuk-body">{{ doc['notes'] }}</p>{% endif %}
             <a class="govuk-link" href="{{ doc['document-url'] }}">View full document</a>
