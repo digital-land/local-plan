@@ -108,7 +108,7 @@
                     Description
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    {{plan["description"]}}
+                    {{plan["description"] if plan["description"] else "-"}}
                 </dd>
             </div>
 
@@ -117,13 +117,13 @@
                     Notes
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    {{plan["notes"]}}
+                    {{plan["notes"] if plan["notes"] else "-"}}
                 </dd>
             </div>
 
 
 
-            <div class="govuk-summary-list__row adopted-plan">
+            <div class="govuk-summary-list__row{% if plan['status']['current']['status'] == 'adopted' %} adopted-plan{% endif %}">
                 <dt class="govuk-summary-list__key" style="border: none;">
                     Timeline
                 </dt>
@@ -131,8 +131,8 @@
                     <div class="lp-pins-stages govuk-!-margin-bottom-8">
 
                         <div class="lp-current-stage">
-                            <span class="lp-stage-tag">adopted</span>
-                            <span class="lp-stage-date">14 Dec 2017</span>
+                            <span class="lp-stage-tag">{{ plan['status']['current']['status'] }}</span>
+                            <span class="lp-stage-date">{{ plan['status']['current']['date'] }}</span>
                         </div>
                         <details class="govuk-details" role="group">
                             <summary class="govuk-details__summary" role="button"
@@ -147,7 +147,13 @@
                                 aria-hidden="true">
                                 <table class="govuk-table">
                                     <tbody class="govuk-table__body">
+                                        {% for stage in plan['status']['timeline']  %}
                                         <tr class="govuk-table__row">
+                                            <th class="govuk-table__cell" scope="row">{{ stage['status'] }}</th>
+                                            <td class="govuk-table__cell">{{ stage['date'] }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                        <!--<tr class="govuk-table__row">
                                             <th class="govuk-table__cell" scope="row">published</th>
                                             <td class="govuk-table__cell">31 Mar 2016</td>
                                         </tr>
@@ -162,7 +168,7 @@
                                         <tr class="govuk-table__row">
                                             <th class="govuk-table__cell" scope="row">adopted</th>
                                             <td class="govuk-table__cell">14 Dec 2017</td>
-                                        </tr>
+                                        </tr>-->
                                     </tbody>
                                 </table>
 
