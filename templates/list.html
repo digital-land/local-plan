@@ -1,4 +1,5 @@
 {% extends "dlf-base.html" %}
+{% from "dl-macros/filter-group.html" import dlfFilterGroup %}
 
 {% block pageTitle %}Local plans | Digital Land{% endblock %}
 
@@ -7,12 +8,55 @@
 	<div class="govuk-grid-column-full">
   	<h1 class="govuk-heading-xl">Local plans</h1>
     </div>
+</div>
 
-    <ul class="govuk-list govuk-grid-column-two-thirds">
-        {% for plan in data %}
-        <li><a href="/local-plan/{{ plan['development-plan'] }}" class="govuk-link">{{ plan['name'] }}</a></li>
-        {% endfor %}
-    </ul>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Filter</h3>
+        <form class="govuk-form" data-facet-search="form">
+            <div class="govuk-!-margin-bottom-6" data-facet-search="filter" data-facet-search-type="text" data-facet-search-name="number-of-documents">
+                {% call dlfFilterGroup({
+                    "title": "Associated documents",
+                    "is_open": False,
+                    "selected": 0
+                  }) %}
+                  
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="document-number">
+                        Total
+                    </label>
+                    <input class="govuk-input" id="document-number" name="document-number" type="text">
+                  </div>
+                {% endcall %}
+            </div>
+            <div class="govuk-form-group">
+                <button class="govuk-button" data-facet-search="submit">Filter</button>
+                <button class="govuk-link" type="reset" data-facet-search="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        <div class="facet-search-wrapper" data-facet-search="list">
+            <div class="facet-search__showing">
+                <p class="govuk-body">Showing <span class="facet-search__count">{{ data|length }}</span> of <span class="facet-search__total-count">{{ data|length }}</span> records.</p>
+            </div>
+            <ul class="govuk-list">
+                {% for plan in data %}
+                <li data-facet-search="item" data-number-of-documents="{{plan['document']|length}}"><a href="/local-plan/{{ plan['development-plan'] }}" class="govuk-link">{{ plan['name'] }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
+{% block bodyEndScripts %}
+{{ super()}}
+<script>
+    {% include 'filter.js' %}
+
+    const $form = document.querySelector('[data-facet-search="form"]');
+    const $list = document.querySelector('[data-facet-search="list"]');
+    new window.DLFrontend.FacetSearch($list, $form).init({})
+</script>
+{% endblock %}
