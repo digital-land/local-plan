@@ -28,7 +28,6 @@
 
     console.log('List items: ', this.$items.length)
     console.log('Filters: ', this.filters)
-    console.log('get a value: ', this.$items[0].dataset[camelize(this.filters[0].name)])
 
     const boundFilterListHandler = this.filterListHandler.bind(this)
     this.$form.addEventListener('submit', boundFilterListHandler)
@@ -62,7 +61,7 @@
   }
 
   FacetSearch.prototype.resetHandler = function (e) {
-    console.log("resetting the form")
+    console.log('reset the form')
     this.showAll()
   }
 
@@ -104,18 +103,26 @@
   }
 
   FacetSearch.prototype.performFilter = function (list, filter) {
+    const that = this
     // handle text input filters
     if (filter.type === 'text') {
       const $input = filter.$element.querySelector('input')
       const _val = $input.value
-      const that = this
 
-      if (_val !== "") {
+      if (_val !== '') {
         return list.filter(function (i) {
           return that.matchTextString(i, filter.name, _val)
         })
       }
       return list
+    } else if (filter.type === 'radio') {
+      const checkedRadio = filter.$element.querySelector('input[type="radio"]:checked')
+      if (checkedRadio) {
+        const _val = checkedRadio.value
+        return list.filter(function (i) {
+          return that.matchTextString(i, filter.name, _val)
+        })
+      }
     }
     return list
   }

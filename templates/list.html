@@ -14,6 +14,7 @@
     <div class="govuk-grid-column-one-third">
         <h3 class="govuk-heading-m">Filter</h3>
         <form class="govuk-form" data-facet-search="form">
+
             <div class="govuk-!-margin-bottom-6" data-facet-search="filter" data-facet-search-type="text" data-facet-search-name="number-of-documents">
                 {% call dlfFilterGroup({
                     "title": "Associated documents",
@@ -29,6 +30,42 @@
                   </div>
                 {% endcall %}
             </div>
+
+            <div class="govuk-!-margin-bottom-6" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="plan-status">
+                {% call dlfFilterGroup({
+                    "title": "Status",
+                    "is_open": False,
+                    "selected": 0
+                }) %}
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="status-pub" name="status" type="radio" value="published">
+                    <label class="govuk-label govuk-radios__label" for="status-pub">
+                      Published
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="status-sub" name="status" type="radio" value="submitted">
+                    <label class="govuk-label govuk-radios__label" for="status-sub">
+                      Submitted
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="status-sound" name="status" type="radio" value="sound">
+                    <label class="govuk-label govuk-radios__label" for="status-sound">
+                      Sound
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="status-adopted" name="status" type="radio" value="adopted">
+                    <label class="govuk-label govuk-radios__label" for="status-adopted">
+                      Adopted
+                    </label>
+                  </div>
+                </div>
+                {% endcall %}
+            </div>
+
             <div class="govuk-form-group">
                 <button class="govuk-button" data-facet-search="submit">Filter</button>
                 <button class="govuk-link" type="reset" data-facet-search="reset">Reset</button>
@@ -42,7 +79,9 @@
             </div>
             <ul class="govuk-list">
                 {% for plan in data %}
-                <li data-facet-search="item" data-number-of-documents="{{plan['document']|length}}"><a href="/local-plan/{{ plan['development-plan'] }}" class="govuk-link">{{ plan['name'] }}</a></li>
+                <li data-facet-search="item" data-number-of-documents="{{plan['document']|length}}" data-plan-status="{% if plan['status'] %}{{ plan['status']['current']['status'] }}{% endif %}">
+                    <a href="/local-plan/{{ plan['development-plan'] }}" class="govuk-link">{{ plan['name'] }}</a>
+                </li>
                 {% endfor %}
             </ul>
         </div>
