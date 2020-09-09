@@ -122,7 +122,7 @@
             </div>
 
 
-
+            {% if plan['status'] %}
             <div class="govuk-summary-list__row{% if plan['status']['current']['status'] == 'adopted' %} adopted-plan{% endif %}">
                 <dt class="govuk-summary-list__key" style="border: none;">
                     Timeline
@@ -149,26 +149,10 @@
                                     <tbody class="govuk-table__body">
                                         {% for stage in plan['status']['timeline']  %}
                                         <tr class="govuk-table__row">
-                                            <th class="govuk-table__cell" scope="row">{{ stage['status'] }}</th>
-                                            <td class="govuk-table__cell">{{ stage['date'] }}</td>
+                                            <th class="govuk-table__cell" scope="row">{{ stage['development-plan-status'] }}</th>
+                                            <td class="govuk-table__cell">{{ stage['end-date'] }}</td>
                                         </tr>
                                         {% endfor %}
-                                        <!--<tr class="govuk-table__row">
-                                            <th class="govuk-table__cell" scope="row">published</th>
-                                            <td class="govuk-table__cell">31 Mar 2016</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th class="govuk-table__cell" scope="row">submitted</th>
-                                            <td class="govuk-table__cell">20 Oct 2016</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th class="govuk-table__cell" scope="row">sound</th>
-                                            <td class="govuk-table__cell">29 Sep 2017</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th class="govuk-table__cell" scope="row">adopted</th>
-                                            <td class="govuk-table__cell">14 Dec 2017</td>
-                                        </tr>-->
                                     </tbody>
                                 </table>
 
@@ -177,6 +161,7 @@
                     </div>
                 </dd>
             </div>
+            {% endif %}
         </dl>
 
     </div>

@@ -48,21 +48,6 @@ for plan in plan_data:
     plan_organisations = plan['organisations'].split(';')
     boundaries = get_boundaries(organisations, plan_organisations)
 
-    # need to replace this with real data
-    status = {
-        "current": {
-            "status": "adopted",
-            "date": "14 Dec 2017"
-        },
-        "timeline": [
-            {"status": "published", "date": "31 Mar 2016"},
-            {"status": "submitted", "date": "20 Oct 2016"},
-            {"status": "sound", "date": "29 Sep 2017"},
-            {"status": "adopted", "date": "14 Dec 2017"}
-        ]
-    }
-    plan['status'] = status
-
     render(
         f"local-plan/{plan['development-plan']}/index.html",
         plan_template,
