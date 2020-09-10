@@ -9,6 +9,7 @@ from jinja_filters import map_organisation_id_filter, statistical_geography_code
 
 docs = "docs/"
 static_path = "https://digital-land.github.io" # use frontend assets we have published
+static_path = "https://digital-land-design.herokuapp.com/static"
 
 def render(path, template, **kwargs):
     path = os.path.join(docs, path)
@@ -42,7 +43,7 @@ plan_data = get_local_plan_data()
 organisations = get_organisation_data()
 
 # generate the pages
-render("index.html", list_template, data=plan_data)
+render("index.html", list_template, data=plan_data, organisations=organisations)
 
 for plan in plan_data:
     plan_organisations = plan['organisations'].split(';')

@@ -94,9 +94,17 @@
                 <input class="govuk-input govuk-input--width-4" id="document-number" name="document-number" type="text">
             </div>
 
+            <div class="govuk-form-group" data-facet-search="filter" data-facet-search-type="text" data-facet-search-name="year-adopted">
+                <label class="govuk-label" for="year-adopted">
+                    Year adopted
+                </label>
+                <span class="govuk-hint">For example, 2012</span>
+                <input class="govuk-input govuk-input--width-4" id="year-adopted" name="year-adopted" type="text">
+            </div>
+
             <div class="govuk-form-group">
                 <button class="govuk-button" data-facet-search="submit">Filter</button>
-                <a class="govuk-link" href="">Reset</a>
+                <a class="govuk-link link-align-btn" href="">Clear</a>
             </div>
         </form>
     </div>
@@ -107,7 +115,11 @@
             </div>
             <ul class="govuk-list">
                 {% for plan in data %}
-                <li data-facet-search="item" data-number-of-documents="{{plan['document']|length}}" data-plan-status="{% if plan['status'] %}{{ plan['status']['current']['status'] }}{% endif %}" data-organisation="{{ plan['organisations'] }}">
+                {%- if plan['status'] %}
+                    {%- set date = plan['status']['current']['date'].split('-') %}
+                    {%- set year = date[0] %}
+                {% endif -%}
+                <li data-facet-search="item" data-number-of-documents="{{plan['document']|length}}" data-plan-status="{% if plan['status'] %}{{ plan['status']['current']['status'] }}{% endif %}" data-organisation="{{ plan['organisations'] }}" data-year-adopted="{% if plan['status'] %}{{ year }}{% endif %}">
                     <a href="{{ plan['development-plan'] }}" class="govuk-link">{{ plan['name'] }}</a>
                 </li>
                 {% endfor %}
