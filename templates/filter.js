@@ -116,6 +116,17 @@
           return that.matchTextString(i, filter.name, _val)
         })
       }
+    } else if (filter.type === 'checkbox') {
+      const checkedCheckboxes = filter.$element.querySelectorAll('input[type="checkbox"]:checked')
+      if (checkedCheckboxes) {
+        const values = []
+        checkedCheckboxes.forEach(function ($checkbox) {
+          values.push($checkbox.value)
+        })
+        return list.filter(function (i) {
+          return that.matchAnyValue(i, filter.name, values)
+        })
+      }
     }
     return list
   }
@@ -125,6 +136,16 @@
       return true
     }
     return false
+  }
+
+  FacetSearch.prototype.matchAnyValue = function ($item, propName, values) {
+    let match = false
+    values.forEach(function (val) {
+      if ($item.dataset[camelize(propName)].toString().indexOf(val) !== -1) {
+        match = true
+      }
+    })
+    return match
   }
 
   FacetSearch.prototype.updateCountDisplay = function (count) {

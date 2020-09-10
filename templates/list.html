@@ -1,5 +1,6 @@
 {% extends "dlf-base.html" %}
 {% from "dl-macros/filter-group.html" import dlfFilterGroup %}
+{% from "dl-macros/helpers.html" import random_int %}
 
 {% block pageTitle %}Local plans | Digital Land{% endblock %}
 
@@ -66,6 +67,41 @@
                 {% endcall %}
             </div>
 
+            <div class="govuk-form-group" data-facet-search="filter" data-facet-search-type="checkbox" data-facet-search-name="organisation">
+                {% call dlfFilterGroup({
+                    "title": "Organisation",
+                    "is_open": False,
+                    "selected": 0
+                }) %}
+                
+                {% set randomID_filter = random_int(5) %}
+                {% set randomID_list = random_int(5) %}
+                <div class="govuk-checkboxes" data-module="filter-checkboxes">
+                    <div class="filter-group__auto-filter">
+                        <label for="input-f3852fb8" class="govuk-label govuk-visually-hidden">
+                        Filter Show only
+                        </label>
+                        <input name="option-select-filter" id="input-f3852fb8" class="govuk-input filter-group__auto-filter__input" type="text" aria-describedby="checkbox-filter-{{ randomID_filter }}" aria-controls="checkboxes-{{ randomID_list }}">
+                    </div>
+
+                    <div role="group">
+                        <span id="checkbox-filter-{{ randomID_filter }}" class="filter-group__auto-filter__desc govuk-visually-hidden" aria-live="polite" data-single="option found" data-multiple="options found" data-selected="selected">How many showing</span>
+                    
+                        <div id="checkboxes-{{ randomID_list }}" class="checkbox-list">
+                            {% for id, org in organisations.items() %}
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="local-authority-{{ loop.index}}" name="org" type="checkbox" value="{{ id }}">
+                                <label class="govuk-label govuk-checkboxes__label" for="local-authority-{{ loop.index }}">
+                                  {{ org[0]['name'] }}
+                                </label>
+                              </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endcall %}
+            </div>
+
             <div class="govuk-form-group">
                 <button class="govuk-button" data-facet-search="submit">Filter</button>
                 <a class="govuk-link" href="">Reset</a>
@@ -79,7 +115,7 @@
             </div>
             <ul class="govuk-list">
                 {% for plan in data %}
-                <li data-facet-search="item" data-number-of-documents="{{plan['document']|length}}" data-plan-status="{% if plan['status'] %}{{ plan['status']['current']['status'] }}{% endif %}">
+                <li data-facet-search="item" data-number-of-documents="{{plan['document']|length}}" data-plan-status="{% if plan['status'] %}{{ plan['status']['current']['status'] }}{% endif %}" data-organisation="{{ plan['organisations'] }}">
                     <a href="{{ plan['development-plan'] }}" class="govuk-link">{{ plan['name'] }}</a>
                 </li>
                 {% endfor %}
@@ -101,6 +137,11 @@
     var $filters = document.querySelectorAll('[data-module="selected-counter"]')
     $filters.forEach(filter => {
         new window.DLFrontend.SelectedCounter(filter).init()
+    })
+
+    var $filterCheckboxes = document.querySelectorAll('[data-module="filter-checkboxes"]')
+    $filterCheckboxes.forEach(el => {
+        new window.DLFrontend.FilterCheckboxes(el).init()
     })
 </script>
 {% endblock %}
