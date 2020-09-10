@@ -2,18 +2,44 @@
 {% from "dl-macros/filter-group.html" import dlfFilterGroup %}
 {% from "dl-macros/helpers.html" import random_int %}
 
-{% block pageTitle %}Local plans | Digital Land{% endblock %}
+{% from "local-plan-card.jinja" import localPlanCard %}
+
+{% block pageTitle %}List of local plans | Digital Land{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    "classes": "govuk-width-container",
+    "tag": {
+      "text": "prototype"
+    },
+    "html": 'This is a prototype. Please provide feedback to the Digital Land team.'
+  }) }}
+
+  {{ govukBreadcrumbs({
+    "items": [
+      {
+        "text": "Digital Land",
+        "href": "https://digital-land.github.io/"
+      },
+      {
+        "text": "Local plans"
+      }
+    ]
+  }) }}
+
+{% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-full">
-  	<h1 class="govuk-heading-xl">Local plans</h1>
+        <span class="govuk-caption-xl">Development plans</span>
+  	    <h1 class="govuk-heading-xl">Local plans</h1>
     </div>
 </div>
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
-        <h3 class="govuk-heading-m">Filter</h3>
+        <h3 class="govuk-heading-m">Filters</h3>
         <form class="govuk-form" data-facet-search="form">
 
             <div class="govuk-!-margin-bottom-6" data-module="selected-counter" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="plan-status">
@@ -114,15 +140,26 @@
                 <p class="govuk-body">Showing <span class="facet-search__count">{{ data|length }}</span> of <span class="facet-search__total-count">{{ data|length }}</span> records.</p>
             </div>
             <ul class="govuk-list">
-                {% for plan in data %}
+                {% for plan in data -%}
+
                 {%- if plan['status'] %}
                     {%- set date = plan['status']['current']['date'].split('-') %}
                     {%- set year = date[0] %}
                 {% endif -%}
-                <li data-facet-search="item" data-number-of-documents="{{plan['document']|length}}" data-plan-status="{% if plan['status'] %}{{ plan['status']['current']['status'] }}{% endif %}" data-organisation="{{ plan['organisations'] }}" data-year-adopted="{% if plan['status'] %}{{ year }}{% endif %}">
-                    <a href="{{ plan['development-plan'] }}" class="govuk-link">{{ plan['name'] }}</a>
-                </li>
-                {% endfor %}
+                {%- set currentStatus = plan['status']['current']['status'] if plan['status'] else "" %}
+
+                {{ localPlanCard({
+                    "attributes": {
+                        "data-facet-search": "item",
+                        "data-number-of-documents": plan['document']|length,
+                        "data-plan-status": currentStatus,
+                        "data-organisation": plan['organisations'],
+                        "data-year-adopted": year if plan['status'] else ""
+                    },
+                    "plan": plan
+                }) }}
+
+                {%- endfor %}
             </ul>
         </div>
     </div>
