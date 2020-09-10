@@ -31,7 +31,7 @@
                 {% endcall %}
             </div>
 
-            <div class="govuk-!-margin-bottom-6" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="plan-status">
+            <div class="govuk-!-margin-bottom-6" data-module="selected-counter" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="plan-status">
                 {% call dlfFilterGroup({
                     "title": "Status",
                     "is_open": False,
@@ -68,7 +68,7 @@
 
             <div class="govuk-form-group">
                 <button class="govuk-button" data-facet-search="submit">Filter</button>
-                <button class="govuk-link" type="reset" data-facet-search="reset">Reset</button>
+                <a class="govuk-link" href="">Reset</a>
             </div>
         </form>
     </div>
@@ -97,5 +97,10 @@
     const $form = document.querySelector('[data-facet-search="form"]');
     const $list = document.querySelector('[data-facet-search="list"]');
     new window.DLFrontend.FacetSearch($list, $form).init({})
+
+    var $filters = document.querySelectorAll('[data-module="selected-counter"]')
+    $filters.forEach(filter => {
+        new window.DLFrontend.SelectedCounter(filter).init()
+    })
 </script>
 {% endblock %}

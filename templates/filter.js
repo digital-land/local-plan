@@ -31,8 +31,6 @@
 
     const boundFilterListHandler = this.filterListHandler.bind(this)
     this.$form.addEventListener('submit', boundFilterListHandler)
-    const boundResetHandler = this.resetHandler.bind(this)
-    this.$form.addEventListener('reset', boundResetHandler)
   }
 
   FacetSearch.prototype.allListItems = function () {
@@ -58,11 +56,6 @@
   FacetSearch.prototype.filterListHandler = function (e) {
     e.preventDefault()
     this.filterList()
-  }
-
-  FacetSearch.prototype.resetHandler = function (e) {
-    console.log('reset the form')
-    this.showAll()
   }
 
   FacetSearch.prototype.showAll = function () {
