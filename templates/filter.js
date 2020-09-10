@@ -26,6 +26,11 @@
     this.$items = this.allListItems()
     this.filters = this.allFilters()
 
+    // make sure no items checked
+    this.filters.forEach(function (filter) {
+      this.uncheckAll(filter.$element)
+    }, this)
+
     console.log('List items: ', this.$items.length)
     console.log('Filters: ', this.filters)
 
@@ -150,6 +155,13 @@
 
   FacetSearch.prototype.updateCountDisplay = function (count) {
     this.$currentCount.textContent = count
+  }
+
+  FacetSearch.prototype.uncheckAll = function ($formGroup) {
+    const $checkableEls = $formGroup.querySelectorAll('input[type="checkbox"]', 'input[type="radio"]')
+    $checkableEls.forEach(function ($el) {
+      $el.checked = false
+    })
   }
 
   FacetSearch.prototype.setupOptions = function (params) {
