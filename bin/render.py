@@ -42,14 +42,14 @@ plan_data = get_local_plan_data()
 organisations = get_organisation_data()
 
 # generate the pages
-render("local-plan/index.html", list_template, data=plan_data)
+render("index.html", list_template, data=plan_data)
 
 for plan in plan_data:
     plan_organisations = plan['organisations'].split(';')
     boundaries = get_boundaries(organisations, plan_organisations)
 
     render(
-        f"local-plan/{plan['development-plan']}/index.html",
+        f"{plan['development-plan']}/index.html",
         plan_template,
         plan=plan,
         boundaries=boundaries)

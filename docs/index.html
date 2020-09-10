@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8" />
+    <title>Local plans | Digital Land</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c" /> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon" />
+      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+    
+
+    
+<link href="https://digital-land.github.io/stylesheets/dl-frontend.css" rel="stylesheet" />
+
+    
+    
+    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+
+    
+      <a href="#content" class="govuk-skip-link"></a>
+    
+
+    
+<!-- Cookie banner partial version 1.0.1 -->
+<div id="global-cookie-message" class="govuk-clearfix global-cookie-message" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="">
+
+  <div id="cookie-banner" class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="cookie-banner__message govuk-!-margin-top-6">
+          <h2 class="govuk-heading-m">Tell us whether you accept cookies</h2>
+          <p class="govuk-body">We use <a class="govuk-link" href="/cookies">cookies to collect information</a> about how you use the Digital Land website to make the website work as well as possible.</p>
+        </div>
+        <div class="cooke-banner__buttons govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <button class="govuk-button" onclick="acceptCookies();showCookieConfirmation();">Accept all cookies</button>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <a class="govuk-button"href="/cookies">Set cookie preferences</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-confirmation" class="govuk-width-container govuk-!-padding-top-6" tabindex="-1" style="display: none;">
+    <p class="cookie-banner__confirmation-message govuk-body">You’ve accepted all cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+    <button class="cookie-banner__hide-button govuk-button govuk-button--secondary" onclick="document.getElementById('cookie-confirmation').style.display='none';">Hide</button>
+  </div>
+
+</div>
+<header role="banner" id="global-header" class="govuk-header  with-proposition dl-header" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="header-proposition">
+      <div class="govuk-header__content">
+        <a href="https://digital-land.github.io/" class="govuk-header__link govuk-header__link--service-name">
+        Digital Land
+        </a>
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/about">Team</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/project/">Projects</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/weeknote/">Weeknotes</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/blog-post/">Blog</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/guidance/">Guidance</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/dataset/">Datasets</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/organisation/">Organisations</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/map/">Map</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    
+      <div class="govuk-width-container">
+        
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+  	<h1 class="govuk-heading-xl">Local plans</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Filter</h3>
+        <form class="govuk-form" data-facet-search="form">
+
+            <div class="govuk-!-margin-bottom-6" data-facet-search="filter" data-facet-search-type="text" data-facet-search-name="number-of-documents">
+                
+<details class="filter-group"  data-module="selected-counter">
+	<summary class="filter-group__summary"><h3 class="govuk-heading-s filter-group__heading">Associated documents</h3><svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="filter-group__icon filter-group__icon--up"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+		<svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="filter-group__icon filter-group__icon--down"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+	</summary>
+	<fieldset class="govuk-fieldset filter-group__fieldset">
+		<legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">
+		  <h1 class="govuk-fieldset__heading">
+			Associated documents
+		  </h1>
+		</legend>
+		
+                  
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="document-number">
+                        Total
+                    </label>
+                    <input class="govuk-input" id="document-number" name="document-number" type="text">
+                  </div>
+                
+	</fieldset>
+</details>
+
+            </div>
+
+            <div class="govuk-!-margin-bottom-6" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="plan-status">
+                
+<details class="filter-group"  data-module="selected-counter">
+	<summary class="filter-group__summary"><h3 class="govuk-heading-s filter-group__heading">Status</h3><svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="filter-group__icon filter-group__icon--up"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+		<svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="filter-group__icon filter-group__icon--down"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+	</summary>
+	<fieldset class="govuk-fieldset filter-group__fieldset">
+		<legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">
+		  <h1 class="govuk-fieldset__heading">
+			Status
+		  </h1>
+		</legend>
+		
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="status-pub" name="status" type="radio" value="published">
+                    <label class="govuk-label govuk-radios__label" for="status-pub">
+                      Published
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="status-sub" name="status" type="radio" value="submitted">
+                    <label class="govuk-label govuk-radios__label" for="status-sub">
+                      Submitted
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="status-sound" name="status" type="radio" value="sound">
+                    <label class="govuk-label govuk-radios__label" for="status-sound">
+                      Sound
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="status-adopted" name="status" type="radio" value="adopted">
+                    <label class="govuk-label govuk-radios__label" for="status-adopted">
+                      Adopted
+                    </label>
+                  </div>
+                </div>
+                
+	</fieldset>
+</details>
+
+            </div>
+
+            <div class="govuk-form-group">
+                <button class="govuk-button" data-facet-search="submit">Filter</button>
+                <button class="govuk-link" type="reset" data-facet-search="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        <div class="facet-search-wrapper" data-facet-search="list">
+            <div class="facet-search__showing">
+                <p class="govuk-body">Showing <span class="facet-search__count">423</span> of <span class="facet-search__total-count">423</span> records.</p>
+            </div>
+            <ul class="govuk-list">
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8224e195-a24e-4e10-a1f0-e40721f2e250" class="govuk-link">A Local Plan for Sefton</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="0516a876-6782-4d0c-b31e-e865d85d4bf2" class="govuk-link">Adopted Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="252e87cd-a0d3-4a20-bcc4-b2e104996fa6" class="govuk-link">Adur Local Plan 2017 (adopted) - Part 1</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5538be07-3fac-4f4c-89d4-376868e6fdc1" class="govuk-link">Allerdale Local Plan (Part 1)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b1f7862a-5ab5-43ec-851d-3810d6aaa0f8" class="govuk-link">Alterations to Strategic Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="09a82662-75f1-485d-af89-5f035cdd6126" class="govuk-link">Amber Valley Borough Local Plan  - Plan withdrawn 24 May 2019</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="7ab3c965-3d06-49c9-a4b5-4985f0c4b22f" class="govuk-link">Amended Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="99cb8ce2-eafb-4b1a-ac95-3aef85ceb28e" class="govuk-link">Approved  Local Development Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b6fe3079-37c0-48cb-affe-b5b077ab5d15" class="govuk-link">Arun Local Plan 2011-2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8cdb941a-41bd-4f84-8656-01f31b7f58a1" class="govuk-link">Ashford Local Plan 2030</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="">
+                    <a href="c5fa3dc2-5ea9-4f54-989b-f8dc71612e09" class="govuk-link">Babergh & Mid Suffolk Joint Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b49461a3-759c-4d01-92c1-aff99699e46c" class="govuk-link">Babergh Local Plan - Core Strategy & Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="48647056-2c80-4d6f-a403-ace690639a61" class="govuk-link">Barnet's Local Plan (Core Strategy)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="9ff460cb-2bb8-48d2-80d4-359f6821b89b" class="govuk-link">Barnsley Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d3e0e620-0896-4fb6-88a5-b852fd2130af" class="govuk-link">Barrow Borough Council Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="45d85ac7-9c13-4f28-aca3-aa0db2b6d7ab" class="govuk-link">Bassetlaw Core Strategy & Development Management Policies DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="b56768ad-1ecd-48f6-9935-f7e9352c88f7" class="govuk-link">Bassetlaw Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="c39f1ea7-c037-429f-be7e-45d3f3ad928e" class="govuk-link">Bath and North East Somerset Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="22dd9906-59fd-421b-aee8-c45d2e40868b" class="govuk-link">Bearing Fruits 2031: The Swale Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="3c3c274f-d3e5-4517-a075-8868aaa8af42" class="govuk-link">Bedford Borough Local Plan 2030</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="4221883b-e5f5-469f-95af-93eed23da83b" class="govuk-link">Bedford DPD: Core Strategy and Rural Issues Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="636d2ba4-c268-41a4-80eb-13fa2a9598fd" class="govuk-link">Bexley Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2a72a06b-823f-4146-94a5-2c35446404b5" class="govuk-link">Birmingham Plan 2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="61aa0eb6-1a59-4d58-8f38-667938d42198" class="govuk-link">Blaby District Local Plan: Core Strategy DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="4" data-plan-status="adopted">
+                    <a href="95690c16-7ad0-4b4d-9581-fc267e0f0537" class="govuk-link">Black Country Core Strategy 2011</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="4" data-plan-status="">
+                    <a href="6995ac69-d63a-4c3d-89ad-a7f9c4a8c8da" class="govuk-link">Black Country Core Strategy Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="7ec60977-d892-4a01-8b5f-3b7d175f3e6a" class="govuk-link">Blackburn with Darwen Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="03776d95-0e60-4c47-8d94-37cb160d2197" class="govuk-link">Bolton Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="b2a226dd-f994-49c6-8b18-7e564c66d265" class="govuk-link">Borough Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="0079694f-85e8-4ba5-a0d9-7dfd870a6643" class="govuk-link">Borough Plan 2011-2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b94bbcac-a9b9-48a2-a7c6-66430ecc983e" class="govuk-link">Borough of Redditch Local Plan No. 4</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="aa3cac35-c06f-424e-9323-26211be4d402" class="govuk-link">Bournemouth Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="6f964803-73ae-4e23-b16b-8f795a2fd1f3" class="govuk-link">Bournemouth Local Plan: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="99c678f1-b369-4846-a949-2b2b8538c4e3" class="govuk-link">Braintree LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="f4c4af01-5d24-4b7a-8c79-7d77f3ce2812" class="govuk-link">Braintree Local Plan (North Essex Garden Communities)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5b973444-94c8-4331-9cfb-af0fe6d4cf7f" class="govuk-link">Breckland Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="dff4277e-032b-42ad-8893-0ec6f3db6948" class="govuk-link">Brentwood Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="0e2b5875-0d92-4202-bff0-b717324eeb5d" class="govuk-link">Brighton and Hove City Plan Part One</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="34e96a04-b95b-4812-8abd-72b1b2807189" class="govuk-link">Bristol Development Framework: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="8ec0b613-8270-4018-96b8-0de164fe35cf" class="govuk-link">Bristol Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="602147fb-c091-4eee-b8a4-c19f09ca1509" class="govuk-link">Bromsgrove District Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="63334b68-029e-4d9b-a461-0b65b7c378a1" class="govuk-link">Burnley's Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="034cf060-0268-4964-9fd0-6c10e3c3f405" class="govuk-link">CS Review/Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="74564582-cddd-45f4-b09c-35e08902cf91" class="govuk-link">Calderdale Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="11feb6a5-9c57-41b9-8a03-c30a3509231a" class="govuk-link">Cambridge Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a1cfa4ac-822b-4727-a5fd-0c55909a15bb" class="govuk-link">Camden Local Plan 2017</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="974ae5d1-c3bb-428c-8dc5-f830bc1663a7" class="govuk-link">Cannock Chase Local Plan (Part 1) 2014</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="3fd7dd48-a240-42ed-b9ed-411731039393" class="govuk-link">Canterbury District Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8c82762b-9d1c-4ea8-b18f-e3411c4169a0" class="govuk-link">Carlisle District Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="1d4759cb-5018-43e5-9c6a-ca0372b083c6" class="govuk-link">Central Bedfordshire Local Plan 2035</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="adopted">
+                    <a href="43a07557-8479-4374-b7b5-50099a966ce5" class="govuk-link">Central Lancashire Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="adopted">
+                    <a href="13ed529a-72eb-484c-a96b-dc2d46d9913e" class="govuk-link">Central Lincolnshire Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="35227a41-4853-40a6-aa52-4b357ea222e5" class="govuk-link">Charnwood Local Plan 2011-2028: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="6fcfc710-d741-422d-8a28-03dcd4263845" class="govuk-link">Cherwell Local Plan 2011 – 2031 (Part 1): Partial Review – Oxford’s Unmet Housing Need</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="65ea6e15-82eb-4537-9345-b964f0e883e1" class="govuk-link">Cherwell Local Plan 2011-2031 (Part 1)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="e03a081f-3bd1-4c85-ba87-295a4914f8a0" class="govuk-link">Chesterfield Borough Local Plan 2018-2033</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="680f8d8f-4eb0-41b3-ab50-d1adc16ab896" class="govuk-link">Chichester Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="09bbd8b4-75f5-48aa-954c-ac63018d376f" class="govuk-link">Chichester Local Plan: Key Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="submitted">
+                    <a href="e44f3ac6-d9bd-4f26-a318-3f187eea80d3" class="govuk-link">Chiltern and South Bucks Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="54b326fd-24ae-470f-94a9-ae62061da26e" class="govuk-link">Christchurch Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="adopted">
+                    <a href="8b48f728-8835-4b44-8f1a-d41101baeda1" class="govuk-link">Christchurch and East Dorset Local Plan Part 1 - Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="230c6f1d-7a1c-4765-981f-4ef2850d3e5a" class="govuk-link">City Plan 2019-2040</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e8367ba9-56da-4507-9855-dcc6f2f5e903" class="govuk-link">City of London Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="e678fd93-84a0-49f0-af8e-9bd339ea2d21" class="govuk-link">City of York Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="63778fb0-7e0d-4c36-b9a1-bac42546f982" class="govuk-link">Colchester Local Plan (North Essex Garden Communities)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="346b2235-bd4c-435b-88c7-0fbc40f011a2" class="govuk-link">Colchester Local Plan 2001-2011</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="35b33d09-b9ef-480a-bb4a-62eb6e43bf48" class="govuk-link">Colchester Local Plan Focused Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="23147f33-a203-4148-b639-53bfb88017be" class="govuk-link">Copeland Local Plan 2013-2028</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="947c00eb-7d3e-417a-9240-05057ac08a86" class="govuk-link">Core Planning Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="62a44b10-cdc6-4f7f-ba96-c60decf184ff" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a8dbb275-ef77-4be6-a77a-6cbe28dc4e70" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="450e04d8-3727-494c-ae14-02bebd605939" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="beccd40e-da67-45a7-bdfa-c11004e60d49" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="6e6621ed-7095-4f3a-901c-8477bad6e802" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="9a6adacc-51d0-4d89-bc0c-cf717e549372" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="3a5b4662-b373-4237-ad84-8e1a7649cac9" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b3e36757-e758-44fd-9ed9-70e29904c0f4" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="3cf99a4f-97f0-445a-9283-6f7eb069134b" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="55685acf-e02f-4be0-80ae-4e98d50c7fcf" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="7a2071b3-b840-4224-9548-89f9c3d4ede1" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="876e1503-2382-454f-88cd-876e91fff245" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="71b4f889-b9f7-4a2b-9720-18a3aae13237" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="16949b4c-333a-4885-97cc-3f7bc3161514" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="df7a6d48-c8b9-4d57-87d8-04c9592b31a3" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="f150ab0a-4484-4661-810d-f33c11212694" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8c07a862-73a3-4437-bb83-e3ecdd898bec" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="f2bd3b8f-95ef-4b55-979e-f5022e9f02e1" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="79c434af-fe88-4968-957f-a354a762ef4d" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="f77685f0-3166-4b2e-b668-e3cd71b871d8" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="36b8bb00-2be7-4242-89fa-1fd54ca7bff2" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="9243ef22-ee90-444a-acd4-bcf14b962695" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a8fa4aed-7fdb-4203-94d8-795e137e66aa" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="c28b7f1b-30dd-40b9-bc1c-e59b1b8e1d63" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="88d1e45c-4d33-4a8c-bfd1-7845fd686e41" class="govuk-link">Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d78c2bb3-f734-4adc-9cf9-3146a5c9f929" class="govuk-link">Core Strategy </a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2d1a7516-39b2-45b6-9017-1eb06cef3a05" class="govuk-link">Core Strategy & Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="17e834e2-dc3d-4c40-9d5d-874fa2df71ca" class="govuk-link">Core Strategy (2006 - 2026)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="9ce4ba00-7857-4f9b-916d-9f8ef953c050" class="govuk-link">Core Strategy (Focused Review)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d12562aa-dbf0-4c99-b61c-d6f0116d4870" class="govuk-link">Core Strategy (Partial Review)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="1fe0c26f-d9ae-46b3-93d8-d47d208af5c3" class="govuk-link">Core Strategy 2006-2026</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b21362a8-ed0d-4c6d-90da-ec9ded5cf4fd" class="govuk-link">Core Strategy 2006-2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d06d0c20-25a1-4c64-a419-37ee6df26663" class="govuk-link">Core Strategy 2007</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="7a53a5cc-8931-4548-94cc-8fd20b44a4dd" class="govuk-link">Core Strategy 2008 – 2028</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b160db07-8136-4698-b19b-ddf7db61ec9c" class="govuk-link">Core Strategy 2013-2030</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="bd7f2dda-27ce-4b5e-9bda-dcfd2a63d8e3" class="govuk-link">Core Strategy 2026</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="755f2847-3f10-4ae7-8e09-4a87e6e15602" class="govuk-link">Core Strategy DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="9132b9e3-f3b8-4a11-822d-ee288294313e" class="govuk-link">Core Strategy DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2259cad0-ee6d-44bf-99aa-1aba08dab7f0" class="govuk-link">Core Strategy DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2ed5ae6b-8b7a-4a54-8d9f-89af587810fd" class="govuk-link">Core Strategy DPD </a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="208f8df8-5784-4ea4-8521-a2d58603b234" class="govuk-link">Core Strategy DPD 2006</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b42cefd8-2cc4-4141-932f-0ceb4b59b910" class="govuk-link">Core Strategy Development Plan Document: The Way Forward (2011 - 2026)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e960591a-c774-4e2d-af8c-162e06689991" class="govuk-link">Core Strategy Focussed Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="68988a3d-e798-47b4-84b0-a2ddfaa8eabf" class="govuk-link">Core Strategy Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="cdc30064-9a36-496e-9bae-bb3dc49f9c27" class="govuk-link">Core Strategy Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="7f457d2c-057c-49ec-9361-30c296506671" class="govuk-link">Core Strategy Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ec7b71e5-da20-46c8-a9dd-6b2ef591d5bd" class="govuk-link">Core Strategy Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="6e207c51-d629-4ace-be0a-39dc0573c18c" class="govuk-link">Core Strategy Single Issue Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d18d4eb8-3872-47bb-8fa0-e198affdcf1a" class="govuk-link">Core Strategy and DM Policies DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="caf26791-7db6-4b77-9afd-0b5b988009ac" class="govuk-link">Core Strategy and Development Control Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="15d670bb-4304-47d6-8791-1078623a5c28" class="govuk-link">Core Strategy and Development Control Policies 2008</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="20d50033-8d8a-4cff-88e3-40ba05e1e921" class="govuk-link">Core Strategy and Development Control Policies DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="df77835d-91df-4acc-a426-841dd31f22fd" class="govuk-link">Core Strategy and Development Management Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="75bd4998-b822-4f62-84bc-7e6170b7f87b" class="govuk-link">Core Strategy and Development Plan 2015-2033</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ec74225d-d0a7-49c3-bf6b-889beb430bef" class="govuk-link">Core Strategy and Development Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="6299f130-8216-43d3-8858-89fb9dad5652" class="govuk-link">Core Strategy and Policies DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="891b5b6d-9701-415b-a1d1-ddea27a096fa" class="govuk-link">Core Strategy and Policies DPD Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="adopted">
+                    <a href="6f3b7d3c-a04c-46a6-9f98-c23bd794cf30" class="govuk-link">Core Strategy and Urban Core Plan for Gateshead and Newcastle upon Tyne</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8f4eecb8-0d98-4af4-b5b5-0ffc9451a190" class="govuk-link">Core Strategy for Chiltern District</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="62f52efd-2a09-4f42-b7ad-8e4d3edf028a" class="govuk-link">Core Strategy: Hackney’s strategic planning policies for 2010-2025</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b48f775a-6694-4ea3-8d4c-1a5acf993d5d" class="govuk-link">Core strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ff7a8a59-3da4-4d24-a2ec-0a1b75d108bb" class="govuk-link">Cornwall Local Plan: Strategic Policies 2010-2030</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2092c149-68e6-4107-a1ff-fb929fb4032e" class="govuk-link">Cotswold District Local Plan 2011-2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="d9b60cc5-1285-4146-8b0f-1faa9c27ccf4" class="govuk-link">County Durham Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="1c40a6a9-a132-47a2-a580-0f80d473e61d" class="govuk-link">Coventry City Council Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="fabfb03b-4e3d-4fd8-a874-88d1457874bd" class="govuk-link">Craven Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="1f051964-74ab-49fa-809f-b24f8de9008b" class="govuk-link">Crawley Borough Local Plan 2020 – 2035</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="c60389a1-db50-48c2-8daf-d67ceb5de91b" class="govuk-link">Darlington Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a7e15312-9fd9-4ca0-9fff-56348e710f6b" class="govuk-link">Dartford Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2be3bc2f-67c2-4e1e-ab07-aa5df549bf8d" class="govuk-link">Derby City Local Plan Part 1: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="c8ab0e67-4891-4e0d-8b5e-cea7674c5351" class="govuk-link">Derbyshire Dales Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="f7ab3008-a04e-4536-b285-10566f24f705" class="govuk-link">Development Framework</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="74b773dc-a0f4-4613-8316-af10f6e461bf" class="govuk-link">Development Plan Document - Joint Core Strategy and Development Management Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a6e0dc08-d86e-43b2-8b7b-5d59308e59a0" class="govuk-link">Development Strategy 2026</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="982a65e7-36fa-451b-bfb0-08d6edd8751f" class="govuk-link">Doncaster Council Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="f0ae7dca-4f61-4a52-aeb9-9b155c37d5b9" class="govuk-link">Doncaster Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="ff812dc1-c45d-4dce-a607-72ddeec6ffb4" class="govuk-link">Draft Local Plan (2016-2032)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5dce72aa-fd22-4fd0-8147-32b014158462" class="govuk-link">East Cambridgeshire Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="193ef3e3-af8c-4dbc-94dd-a7dceb2d34a7" class="govuk-link">East Devon Local Plan 2013-31</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="efdf3a9a-9e8f-4089-a90a-0a3b1b200886" class="govuk-link">East Dorset Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="daf38f0d-dcf2-4d3c-abc6-7d71958088d5" class="govuk-link">East Herts District Plan 2018</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="aa7f9c07-780e-44de-a32b-1f9b1ff13e13" class="govuk-link">East Lindsey Local Plan: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d9529aa8-ced5-44a8-b346-b8c71faa82da" class="govuk-link">East Riding Local Plan Strategy Document</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="c1fc7b53-ad45-44a2-ba9c-58874a6f602d" class="govuk-link">Eastbourne Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="e8a54df5-6d14-49a9-94de-55217b23f821" class="govuk-link">Eastleigh Borough Local Plan 2016-2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="94ec63f6-5081-4e42-a23e-433f80d6b918" class="govuk-link">Elmbridge Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="45be6968-284f-4ef9-88eb-1f0a03a49c51" class="govuk-link">Elmbridge New Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="b2b398b5-9209-4fc2-afb2-da939e6dbc0b" class="govuk-link">Epping Forest District Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="59f36be6-65d7-44d4-8013-1ddefbd6baa0" class="govuk-link">Epsom & Ewell Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="49ad7abb-9298-49e8-868a-c41a4848a258" class="govuk-link">Erewash Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="fa593a9c-6a8a-401b-b688-cb7aafdd3182" class="govuk-link">Exmoor National Park Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="44070104-6c42-4d20-8c1a-a4591317abf0" class="govuk-link">Fareham LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="808859ce-cbc7-4a34-86eb-67b002c2db8f" class="govuk-link">Fareham Local Plan 2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="7d89e3cb-d5e6-4271-9cf9-532eb25c452c" class="govuk-link">Fenland Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="3a6c1cb8-c3bc-4e48-a935-d89adda8f211" class="govuk-link">Forest of Dean Core Strategy (modified by Allocations Plan, June 2018)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="af69967a-3ec2-467a-91c7-b1ecdf098fea" class="govuk-link">Future Mole Valley (Local Plan 2018-2033)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a1db663c-71f9-45fe-a8aa-e51f9d03907c" class="govuk-link">Fylde Local Plan to 2032</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="adopted">
+                    <a href="8cecfc29-1e2c-442c-9525-6138c62b00d8" class="govuk-link">Gloucester, Cheltenham and Tewkesbury Joint Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="">
+                    <a href="0677afdc-f4da-48c2-9d13-5f80dd479cd3" class="govuk-link">Gloucester, Cheltenham and Tewkesbury Joint Core Strategy Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="be96f84a-f4be-47b7-98aa-b28702fe0b15" class="govuk-link">Gosport Borough Local Plan 2011-2029</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="4" data-plan-status="">
+                    <a href="0982c692-460f-4d13-8c67-cb6912ee6748" class="govuk-link">Greater Exeter Strategic Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="10" data-plan-status="">
+                    <a href="e86dfd70-6607-44b0-904c-1221ab55f38c" class="govuk-link">Greater Manchester Spatial Framework</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="">
+                    <a href="b428be92-9a52-48d4-9bd5-6c99a3f63c79" class="govuk-link">Greater Norwich Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="adopted">
+                    <a href="1ac65a2e-3457-4033-a5db-f06dc73a257e" class="govuk-link">Greater Nottingham Aligned Core Strategies - Part 1 Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="6d1bee1d-3c05-4aaf-8d7b-2dd014b03eab" class="govuk-link">Halton Delivery and Allocations Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d06d6c34-9bcc-4839-83c4-9334554d546b" class="govuk-link">Hambleton LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ba0cf7b4-31fb-4ac0-a2e0-eac7c34db0da" class="govuk-link">Hammersmith and Fulham Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="18fbd9e5-2d50-47c0-87b2-351edf4242a6" class="govuk-link">Harborough District Local Plan 2011 to 2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="82cf9340-c857-43f2-a3d8-b15b81296f44" class="govuk-link">Harlow Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="fcbf1602-9aa2-44c4-8b9b-589e293d0029" class="govuk-link">Harrogate Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="cc2ab3d9-4427-476e-b241-e79fcf7c37af" class="govuk-link">Harrow Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="fa2050ac-99a9-4b32-850c-ad9237675dfb" class="govuk-link">Hart Local Plan Strategy and Sites 2016-2032</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="50bcfea0-7f33-47f6-aa0f-e041d9dc868e" class="govuk-link">Hartlepool Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d405a621-d7b4-443d-a581-7321d257a772" class="govuk-link">Hastings Local Plan: The Hastings Planning Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="502fdf73-dd61-4b7e-adbc-a6a311dccb5a" class="govuk-link">Havant Borough Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="718f5f8d-1799-4783-92e0-e682f37be1ce" class="govuk-link">Havant Local Plan 2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="6f6a4419-9a2f-4b8b-9cb4-7669753b82d1" class="govuk-link">Havering Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5d138aa0-fa2f-4767-9bbf-710a21e87ea0" class="govuk-link">Herefordshire Local Plan: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="660da294-c5e8-41b6-aab2-e3cd18935cfa" class="govuk-link">High Peak Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="864b5265-0f48-42d0-ac2e-e987fe5073f8" class="govuk-link">Housing Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="39b6a87b-43e3-4483-b229-de8f207a9053" class="govuk-link">Hull Local Plan 2016 to 2032</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="1b887e1a-ad38-4db9-afe1-1edde983f05f" class="govuk-link">Huntingdonshire's Local Plan to 2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ddf32c2e-07a1-459c-bac8-e198d0acf1fc" class="govuk-link">Island Plan: The Isle of Wight Core Strategy and DM Policies DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="9b81c32f-c7e1-4ecd-b529-7a5279a3be78" class="govuk-link">Isles of Scilly Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="c6eb3467-ba83-40a3-9d52-767e7f340c61" class="govuk-link">Islington Council Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="e33a9a80-ca91-4189-a41b-8fecb2b02abd" class="govuk-link">Islington Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2a7f1eb4-e1fb-4f69-a51b-8c64a480320f" class="govuk-link">Joint Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="adopted">
+                    <a href="a72eca2f-24ac-4362-b612-43ebcf7479de" class="govuk-link">Joint Core Strategy for Broadland, Norwich and South Norfolk</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5c88bf51-0629-436a-9900-f0b4eaa4381c" class="govuk-link">King’s Lynn & West Norfolk LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e5e55605-6881-471d-8f23-7222468ec3e0" class="govuk-link">Kirklees Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="49b1a52a-614b-4ea3-a4a1-e2f421115fc8" class="govuk-link">Knowsley Local Plan Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="0c095e34-f368-4b52-be05-b69614c8aba4" class="govuk-link">LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="dde7dcc5-e3c2-433e-a9bc-145fa63863bf" class="govuk-link">LLDC Local Plan 2015-31</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="4c19e2f5-5e6e-4b18-afb6-056c7263e7f8" class="govuk-link">LLDC Revised Local Plan 2020-36</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="f5eeca0a-377f-4b4a-8628-38ccf2a56fe5" class="govuk-link">Lambeth Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="695bb2ed-e6c1-401d-a735-dc4ea2b88a70" class="govuk-link">Lambeth Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="721cea23-beb2-4cbf-8e8c-b1e1e7bde6cb" class="govuk-link">Leeds Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="022aa306-998a-46f1-9fab-302f0bf8cdec" class="govuk-link">Leicester City Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="4e23eab5-e588-4b27-a3bc-5cb678926b11" class="govuk-link">Lewes District Local Plan: Joint Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="330ea240-d27f-4214-86e2-f7b841604812" class="govuk-link">Lewisham Core Strategy 2011</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="6bcaab31-cd8c-47a3-9047-7f4cd728b35f" class="govuk-link">Lichfield District Local Plan Strategy 2015</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="81c562eb-d68f-406e-b15e-8b6a3f61f4d0" class="govuk-link">Liverpool Local Plan 2013-2033</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="fb4d0cb4-4018-47cb-8afa-c8b261516f24" class="govuk-link">Living Lakes: Your Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="3ab660ca-e4a2-4922-85da-155f8041c2c1" class="govuk-link">Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a8cffe27-82e3-494d-ad90-550379c07894" class="govuk-link">Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="07c4c137-0337-42cd-ad8f-10a773954b6d" class="govuk-link">Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b0c67350-039c-4410-9d82-b814b1e29668" class="govuk-link">Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ba74a7a2-6e3e-4ad0-9f8a-9620be69e85d" class="govuk-link">Local Plan (Part One) Strategic Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="4e8dd423-dcbe-44af-96db-3a7eb554c3b9" class="govuk-link">Local Plan - 2011 - 2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="4779bcae-d575-4424-951b-4bf2de775680" class="govuk-link">Local Plan 2011-2029</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="22f9f356-6c82-4256-a696-f6bc9a554df3" class="govuk-link">Local Plan 2011-2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="d9cd6156-7cb2-445d-9101-9111b8e2102c" class="govuk-link">Local Plan 2011-2034</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d12564e2-e7d4-4c42-ae45-823c50dbd2c9" class="govuk-link">Local Plan 2011-2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="77371a69-8dc4-4cca-86ad-2b9654b5e6a1" class="govuk-link">Local Plan 2012-2027 DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="07c8f922-782d-4cb8-9134-56b28df58f2f" class="govuk-link">Local Plan 2013 to 2032</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e9cdd4c9-4ab7-4764-90d0-193af9bb2c04" class="govuk-link">Local Plan 2014-2032</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="140025a9-c5a2-49a2-8dea-baeb2b86a268" class="govuk-link">Local Plan 2014-2034</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="15403182-0a1c-4078-a043-413a644bc4a7" class="govuk-link">Local Plan 2015-2030</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="c131e54c-78e3-476d-85cd-505e4e7247b3" class="govuk-link">Local Plan 2015-2030</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="44dcb65f-6e33-4393-a613-138d131f028a" class="govuk-link">Local Plan 2015-34</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="8f82c5d5-bf7a-4a25-b233-2639606ccd80" class="govuk-link">Local Plan 2017 - 2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="2b11812f-0db2-4efb-bed1-a11e220d29ea" class="govuk-link">Local Plan 2020</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5c914e72-2d3c-4d5a-b85c-038d82b79e64" class="govuk-link">Local Plan 2031: Part 1</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="e564f51e-3ef2-4caf-a6fe-0941988a59ec" class="govuk-link">Local Plan 2033</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e2c62572-f35d-4efb-9d5b-f7c61cff9383" class="govuk-link">Local Plan Core Strategy DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="34092d36-5d59-4d60-b93c-92612d5a8b10" class="govuk-link">Local Plan Part 1 - Joint Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e0e3f95a-d104-4eda-9b86-553812060a8d" class="govuk-link">Local Plan Part 1: Rushcliffe Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5e0e69fb-6794-428b-82e1-aa81dadad2c6" class="govuk-link">Local Plan Part 1: Strategic Policies and Sites</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b1dc0df6-bbe8-4f4e-889c-1046e3b7d114" class="govuk-link">Local Plan Part One - Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="12c410f7-7d60-4e7e-b636-de6d45944548" class="govuk-link">Local Plan Partial Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="3bda3313-7fc4-41e1-ae6f-b29af6accb3c" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="cccbd538-42a2-4cc6-a124-fd6424f5018c" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="cce851d7-7c70-41e5-87f4-767f9fc85bbe" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="04441017-1b67-4a2b-b2bc-fb4925a880cd" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="e21c636d-aee8-43e1-abb6-5b094b158ba7" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="37c09e6b-8a19-4926-b82c-082c65236689" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="aeaeef62-7f36-4c86-bdb2-1bf0d1af1517" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="cd985f3b-7192-4f92-8dcd-c26fa7747a82" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="bafeecd4-7263-4c1d-af5d-5bad6e76490b" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="046494dc-631a-4785-b469-ac29d1cb00fe" class="govuk-link">Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="a37f5aa7-26df-4435-9f54-b4b15ff03b9d" class="govuk-link">Local Plan Review (Draft)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="ca6713f0-530b-43df-9b3d-f291f227a9da" class="govuk-link">Local Plan Review (Withdrawn 21 February 2019)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="f6868aaf-a9af-4447-baa0-dd735becbf48" class="govuk-link">Local Plan Review 2016-2036 - Part One: Planning Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="32a23802-e58d-497f-a4d3-ecb6b4aaea22" class="govuk-link">Local Plan Review Document</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="796b09f8-af75-4dea-ba4b-0ace06381dd0" class="govuk-link">Local Plan Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e2db8c69-df16-43be-9f7f-3c0006e50a11" class="govuk-link">Local Plan for Bolsover District</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="c4960e3b-ad51-4d94-a886-0125d830ebba" class="govuk-link">Local Plan for the Bradford District</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="7dd9e611-a2f6-4904-9b54-ddf987d87945" class="govuk-link">Local Plan for the Broads</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="90acde0a-70aa-4da3-a861-79f7970ff5dc" class="govuk-link">Local Plan review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="9854a430-cc99-44e3-a7b8-328f7cbd09fb" class="govuk-link">Local Plan to 2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="b5a7a7cc-6b8a-491e-97a3-c5372289edb1" class="govuk-link">Local Plan to 2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a9818144-8028-40ac-bfd5-46c57db30357" class="govuk-link">Local Plan: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d299fb9a-a499-4518-8b24-595185cd55ea" class="govuk-link">Local Plan: Part 1 Strategic Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="a9608242-297d-4865-aa47-c0f44b51f93b" class="govuk-link">Local plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="f4e01c41-d817-4a06-a17e-436572c7c435" class="govuk-link">London Borough of Richmond Upon Thames</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="211efb01-2f53-482c-95b0-0f12ca199dae" class="govuk-link">Luton Local Plan (2011-2031)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="97695714-434d-48b5-8621-6504aec6849c" class="govuk-link">Maidstone Borough Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="58b14fc2-abb1-49dc-9052-d2833a799438" class="govuk-link">Manchester's LDF: Core Strategy DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="5f25d9c6-6334-4507-8b61-01a9ba6f8d40" class="govuk-link">Mansfield District Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="0a64c812-d576-4efc-b5e9-229259d3b7a5" class="govuk-link">Melton Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a1fd6006-2964-43ed-8cf4-6191f59bb5b8" class="govuk-link">Mendip Local Plan Part One: Strategy and Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="7c4e3e98-d750-446f-aaed-8ba26f1e2558" class="govuk-link">Mid Sussex District Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="dae4fee0-67da-4a86-9866-21747547ea10" class="govuk-link">Middlesbrough Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2c041667-e350-44c5-83ec-78ea5e6f3b2d" class="govuk-link">Mole Valley Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="2609e523-004f-4eb9-b2d5-89aa31422e5a" class="govuk-link">New Castle Point Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="d877f907-b0ba-44ca-9a83-f8dbb7cf86d8" class="govuk-link">New Charnwood Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="9a026ec2-d842-4206-8366-5f2255ce11a6" class="govuk-link">New Forest National Park Local Plan 2016-2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="ca9edb36-e6c0-4f82-b472-5af6e8828069" class="govuk-link">New Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="df5e4626-c8f9-458c-9b75-c6aaf19841f7" class="govuk-link">New Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="439dfb09-86cd-4837-9547-6c885db855ac" class="govuk-link">New Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="cb5c7478-36a7-4638-aa3b-9a61661e2f3a" class="govuk-link">New Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8f711fa3-3fd0-4fd3-8c24-1e553d858690" class="govuk-link">New Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="e48491e3-38dc-4b7a-9aee-0b6f4f917707" class="govuk-link">New Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="b3a6f957-a015-4ac6-8e92-c0aab6b423b2" class="govuk-link">New Local Plan for Hambleton</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="e13bb6fc-01df-4c95-8ab8-5cb3270e8be0" class="govuk-link">New Single Local Plan (to 2036)*</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="2e3ad928-7219-42c1-aab7-899c1569af05" class="govuk-link">New Southwark Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="0903925b-45bb-4c6c-8938-14aa113cdff1" class="govuk-link">New Watford Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="adopted">
+                    <a href="54ee799a-3874-4a32-82ee-c5632b7c4b69" class="govuk-link">Newcastle-under-Lyme and Stoke-on-Trent Core Spatial Strategy 2006-2026</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="f18ffccb-ad43-4fb1-aabf-32be13d6bae8" class="govuk-link">North Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="adopted">
+                    <a href="bfad269b-2eb1-4d33-ac9c-8f1fc83a35f7" class="govuk-link">North Devon and Torridge Local Plan 2011-2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="04ab2fba-19b9-4013-8285-ed0e316d50d0" class="govuk-link">North Dorset Local Plan Part 1</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="269fe47a-004f-4a5e-8ac6-bb37482c33f2" class="govuk-link">North East Derbyshire Local Plan (2014 - 2034)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="61bd5d04-0ba0-4210-b305-495fe8ad8bc7" class="govuk-link">North Lincolnshire LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="a506cb38-7ee1-448e-8841-102a7f6bc4a7" class="govuk-link">North Lincolnshire Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="4" data-plan-status="adopted">
+                    <a href="b818aff3-bd8a-4243-8e7a-e4ac402182de" class="govuk-link">North Northamptonshire Joint Core Strategy 2011-2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="bea9718c-1bd1-4fa4-a9d8-e7d280d41059" class="govuk-link">North Somerset Core Strategy (Consolidated)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="234a8240-fa63-4106-ab7c-89aa574f9ef7" class="govuk-link">North Somerset Core Strategy (Housing Policy)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="be9ad1c4-f2a8-4e68-b56e-872caf7be0a3" class="govuk-link">North Tyneside Local Plan 2017</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="0da2ac86-8bf0-4c4b-bc48-2da92f46727f" class="govuk-link">North Warwickshire Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="7126a8e1-f2cc-4e04-9a8f-784acc04e6b0" class="govuk-link">North West Leicestershire Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="0f521478-8e31-4bd4-b667-7370f2e7a34d" class="govuk-link">North York Moors Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="d2a08f60-f8a2-470b-b214-d189416d1b66" class="govuk-link">Northumberland Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="78180781-4d4a-46c6-a525-b55512385655" class="govuk-link">Northumberland National Park Local Plan 2017-2037</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="716c27fa-4e56-4fbc-8a1d-f86fe99a2b7e" class="govuk-link">Our Local Plan 2033</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="76b9910c-53ea-45c8-ac22-5a35ea0e12f8" class="govuk-link">Oxford Core Strategy 2026</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="211c51b8-45eb-422a-b364-46acfed71b84" class="govuk-link">Oxford Local Plan 2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="30da2be2-5875-4fcb-b9f5-bb41273b90be" class="govuk-link">Pendle Local Plan Part 1: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="12667eb0-cc73-47bb-8ff0-69487a91411e" class="govuk-link">Peterborough Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="18a7a012-9dd1-4f9c-ae0b-7f6537e4790f" class="govuk-link">Plan:MK</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="8bf40faf-712e-41c1-9ec2-900e44da938d" class="govuk-link">Planning for Growth: Hertsmere Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d00b83a7-aabe-4bbd-866c-ef2cc11d59a3" class="govuk-link">Planning for the future of Barking and Dagenham: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="adopted">
+                    <a href="ac0c21f8-0035-4190-ac6d-31803fc784f4" class="govuk-link">Plymouth & South West Devon Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="1d9933b6-9107-439d-8566-d847fe7b3757" class="govuk-link">Poole Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="c6778cf4-8637-4b34-a625-aeb5374270bd" class="govuk-link">Purbeck Local Plan (2018-2034)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="c2992718-cac6-4bff-9fb1-8b8a5cdbef95" class="govuk-link">Purbeck Local Plan Part 1</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="eb59f334-6abc-4303-99a2-20864f8a83c3" class="govuk-link">Reading Borough Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="46f938fa-79f8-461d-b9ed-7a3354d92e40" class="govuk-link">Redcar and Cleveland Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="51ddab07-f679-41d6-a419-32f7bd25f277" class="govuk-link">Reigate and Banstead Local Plan: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="86b612dd-a8bd-405b-aa8e-cb39448005c2" class="govuk-link">Richmondshire Local Plan 2012-2028: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="25f47afe-dd9e-4f00-b7d6-4e5db7c499ac" class="govuk-link">Richmondshire Revised Local Plan (2018-2035)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="f95887c6-88cb-4a54-9da5-7acef0ae60df" class="govuk-link">Rochford LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="e3787097-4490-41c4-8bb5-233cb51ac116" class="govuk-link">Rossendale Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="7321ff7a-d9d2-4aec-8fa5-ebd96ecde1f8" class="govuk-link">Rother Local Plan Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="2d208e84-641b-4bcc-9a6b-40627a3e8f68" class="govuk-link">Rotherham Local Plan: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="290c3718-c7ff-47bc-9bba-f577fde9af9c" class="govuk-link">Runnymede 2030: Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="eeb2557f-d431-4893-a38b-a9e0a31f2b70" class="govuk-link">Rushmoor Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="a181a336-e5d9-47c7-9d9d-41384fc1955a" class="govuk-link">Rutland Local Plan (2018 - 2036) Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="4a7df200-6ad1-4a01-a7a9-fcd7385faf6f" class="govuk-link">Ryedale Plan - Local Plan Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="c84ad4a8-b539-4cd6-a762-75e1e8195fd8" class="govuk-link">Salford Local Plan: DM Policies & Designations</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="4a379f6b-7970-4522-9762-f85da25ba5ab" class="govuk-link">Scarborough Borough Local Plan - 2011/32</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8e97b761-1082-40cb-a1a5-d66ba4bc41b0" class="govuk-link">Selby District Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d8fff231-e5a6-48b0-b47d-37968cb0573f" class="govuk-link">Selective Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="87c3ba8f-e036-4abb-92e6-f6a2bf70e7e2" class="govuk-link">Sevenoaks Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="62bb87e0-2ba8-44bf-83fd-7c9dbab6dcfd" class="govuk-link">Sevenoaks District Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="bc8402a6-ac41-41d7-8484-d098325bcdbb" class="govuk-link">Shaping the Borough: New Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="de6cbb4d-42b0-4e30-8de6-9c03018ce068" class="govuk-link">Sheffield Development Framework: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ed84f6ef-44cd-406a-89b0-40ceb70149f8" class="govuk-link">Shepway Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="530eca56-a7e3-4b70-860d-d928a1e9ad67" class="govuk-link">Shropshire Local Development Framework: Adopted Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="7402de6b-c08f-43ee-a25f-160c3ecce97c" class="govuk-link">Shropshire Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="4544d998-b626-4a0f-9857-835d7dca8b86" class="govuk-link">Slough Local Plan 2016-2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a11d7559-1ec8-436c-b643-8a2b78660d80" class="govuk-link">Solihull Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="4d9d0624-fda5-4a62-b37d-9cca77df0ebd" class="govuk-link">Solihull Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="37c9c2dc-d71f-4940-83fd-3d570bbc351a" class="govuk-link">South Cambridgeshire Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="402fd3ba-a16d-4e7c-8aa3-1c2dec3654b4" class="govuk-link">South Derbyshire Local Plan: Part 1</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="6a2d40d5-1f4c-4d69-a634-2be64dc0bae9" class="govuk-link">South Downs Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="adopted">
+                    <a href="5a9b2069-4901-4bbc-9a8f-8a784211ed03" class="govuk-link">South East Lincs Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="de0f06ad-3b78-400e-8caa-9296441e5f29" class="govuk-link">South Lakeland LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="6288af75-399b-4878-9b85-0891d95ff058" class="govuk-link">South Oxfordshire Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="71333f62-e138-42b7-8132-2b2a99687171" class="govuk-link">South Somerset Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="24a89ae4-2592-4c6e-bfdc-f844a8f5b9a2" class="govuk-link">South Staffordshire Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a9c0dfea-a696-4c82-9931-f6a5b7f8b106" class="govuk-link">South Tyneside LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="adopted">
+                    <a href="868e439e-f1c0-41a1-b952-d9db2beb06c2" class="govuk-link">South Worcestershire Development Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="">
+                    <a href="2458d797-2eb5-4c29-a1cc-93c10bf58b9f" class="govuk-link">South Worcestershire Development Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="347b2893-531b-4f87-bffe-10642ef7cc45" class="govuk-link">Southampton Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="4eb91c4f-9be4-436a-af7d-3459099a482e" class="govuk-link">Spelthorne Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="c9cd8aa4-cfe3-4e7f-b81b-bb6dae5b620b" class="govuk-link">St Albans City & District Local Plan 2020-2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5707f9cd-ba5a-4499-8a24-4e331173dfc7" class="govuk-link">St Edmendsbury Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="dabf2ff2-4aba-4065-b2a3-1601c2743ae3" class="govuk-link">St Helens Borough Plan 2020-2035</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="4f7371c0-5815-4ccc-a6ac-9a684de38898" class="govuk-link">St.Helens Local Plan Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d52f82b7-2ab5-4489-87fe-fa9ef836e5fd" class="govuk-link">Staffordshire Moorlands Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="e16df853-5eff-4b7a-b1cf-4390ef7ea592" class="govuk-link">Staffordshire Moorlands Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="93a3b417-4093-4b7b-beff-14bd0a000eb5" class="govuk-link">Stevenage Borough Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="b35b2ea5-ea2c-419d-958a-286ff6f3cd41" class="govuk-link">Stockton-on-Tees Borough Council: Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="">
+                    <a href="2b7aceb6-f7a6-4348-b060-b41af82e6659" class="govuk-link">Stoke-on-Trent and Newcastle-under-Lyme Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="sound">
+                    <a href="72209839-2460-4c35-9d63-79e389f0062c" class="govuk-link">Strategic Policies & Land Allocation</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="91ac26b7-d253-4569-9a70-92763649a92a" class="govuk-link">Strategic Policies Partial Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="fa1fa437-3953-4667-899a-d3182c55ccfe" class="govuk-link">Stratford-on-Avon Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="3566d0ae-643f-4ae4-85ec-fadfecaff610" class="govuk-link">Stroud District Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="6bdea091-e756-48f8-b498-22ee065e6abc" class="govuk-link">Stroud District Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="f7455507-72b1-4513-af01-3ae610717999" class="govuk-link">Suffolk Coastal Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="24a33892-8d79-44d6-aa65-f76596059269" class="govuk-link">Suffolk Coastal Local Plan: Core Strategy & Development Management Policies</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="83699784-e72d-4388-abd9-a17c4c8c54df" class="govuk-link">Sutton Local Plan 2016-2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="60e20958-1eba-4aca-bed4-dca99d89ca8d" class="govuk-link">Swindon Borough Local Plan 2026</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e3b7c403-fb3e-404f-8a2a-d78fd5091da5" class="govuk-link">Tamworth Borough Council Local Plan 2006-2031 </a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="6617edd1-f845-417c-9f11-cb50ba744750" class="govuk-link">Tandridge District Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5627dd48-f80d-43ca-9357-49390aee0e02" class="govuk-link">Taunton Dene Adopted Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="3ee9fb02-ee40-446a-8e35-ee3ffc817f8b" class="govuk-link">Teignbridge Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="61b4391f-70d8-4836-bae1-62ff3b1ffdec" class="govuk-link">Teignbridge Local Plan Review</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="67b93853-f801-43fd-ab35-7798b6071256" class="govuk-link">Telford & Wrekin Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="51cae130-b31a-4abb-ab25-9ed9a2273ecb" class="govuk-link">Tendring District Local Plan (North Essex Garden Communities)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8b400e77-b8c6-4d30-b6e6-c919233e46be" class="govuk-link">The Broxbourne Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="17213289-e289-47bb-8638-bad7cb4d88bc" class="govuk-link">The Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a418a33c-0b10-4493-8adf-12a820a125aa" class="govuk-link">The Enfield Plan Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="411bcf35-eb52-4746-aec8-deb9c9ce8a4f" class="govuk-link">The Island Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="9d615ee9-76df-4968-9dd2-c58eae902804" class="govuk-link">The Plan for Stafford Borough</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="17f4d075-1877-489c-8c6c-8a5a8b2068d1" class="govuk-link">The Portsmouth Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ef664de8-93b8-43eb-875a-8b36e0595b3f" class="govuk-link">The Sedgemoor Local Plan 2011-2032</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="319394a0-b436-4c33-82c7-8c6afd7175be" class="govuk-link">The Sheffield Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="74831e62-6999-4fc6-b1c9-15cef465f045" class="govuk-link">Three Rivers Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e7448134-09bb-43a9-a657-d6cfcd18029a" class="govuk-link">Thurrock Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="8464078a-b6c8-45a4-8d96-6454ad9babe0" class="govuk-link">Thurrock Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="b393fec5-4ddb-4368-8a57-c35ee04956a4" class="govuk-link">Tonbridge & Malling Borough Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="cd0ce8db-58e3-4705-8a95-5e92dfe5ab39" class="govuk-link">Torbay Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="228cdd2a-b858-4c87-b6a7-899488ecedb1" class="govuk-link">Tower Hamlets Local Plan 2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="949e2438-8d71-4be0-b5dc-67400e8607fc" class="govuk-link">Trafford Local Plan: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="c7762330-14f6-4b3f-bc7a-57b42fadf22e" class="govuk-link">Uttlesford Local Plan (Plan withdrawn 30 April 2020)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="6ec9e814-2154-404d-bbc0-1dd04e3b95df" class="govuk-link">Vale of Aylesbury Local Plan 2013-2033</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="56ffcf42-1e88-4237-87a5-d6932011ae30" class="govuk-link">Wakefield LDF: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="e4defd69-6273-4f9e-8121-4b5f55020607" class="govuk-link">Wakefield Local Development Plan 2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="85edc099-3eee-4b89-9184-294530b10434" class="govuk-link">Waltham Forest Local Plan - Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="published">
+                    <a href="700c13cc-11f3-4b83-b7cd-c3b47e655842" class="govuk-link">Warrington Local Plan 2019</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="52708857-29ec-4fc7-8c06-0e0654cc5303" class="govuk-link">Warwick District Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="d1efd344-82c2-4844-a8e2-386ba0813dfb" class="govuk-link">Watford's Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="5bfa79f8-b2e9-464e-b362-0b79272febff" class="govuk-link">Waveney Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="7b18c2ee-2db5-481d-b79b-546395189b20" class="govuk-link">Wealden Local Plan (Plan withdrawn 19 Feb 2020)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="submitted">
+                    <a href="9cd9b1e0-e19c-40ff-a367-b55da0a168ef" class="govuk-link">Welwyn Hatfield Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="69d8a719-df50-4f2a-a6ce-3f905b07f1e3" class="govuk-link">West Berkshire Core Strategy DPD</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="071175c1-5f10-43dd-8ff9-97e3db1b8912" class="govuk-link">West Berkshire Local Plan Review to 2036</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="2" data-plan-status="adopted">
+                    <a href="e25988ed-d64e-4bcd-914f-38ddb7b0c83e" class="govuk-link">West Dorset, Weymouth and Portland Local Plan 2015</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="3" data-plan-status="adopted">
+                    <a href="194c957b-2fd6-499d-b6d6-4f8344b4db32" class="govuk-link">West Northamptonshire Joint Core Strategy Local Plan (Part 1)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="43ff978e-dedf-42cd-bff2-5b746c62ec70" class="govuk-link">West Oxfordshire Local Plan 2031</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="4cb09287-7a8f-4aa6-9076-3c7466ad26ec" class="govuk-link">West Somerset Local Plan to 2032</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="4" data-plan-status="submitted">
+                    <a href="fc42cabb-a43b-4985-85a7-6bf3b4b90f27" class="govuk-link">West of England JSP (Plan Withdrawn 7 April 2020)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="e569ebb4-652e-4da0-ab93-731bab522d90" class="govuk-link">Westminster City Plan (NPPF Revision)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="1dc02551-0279-4da2-a0e0-14f22fce3893" class="govuk-link">Wigan Local Plan: Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="46cd098f-c373-41d6-9996-664df6ff1ba7" class="govuk-link">Wiltshire Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="cbd8c7a3-1ae2-44cc-b226-7b06a1141f4c" class="govuk-link">Winchester District Local Plan 2018-2038</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="6701085e-c35c-4115-8f3d-d1cee602a560" class="govuk-link">Wirral Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="a7e6d646-54de-45b6-9085-adb7808b9f56" class="govuk-link">Woking Borough Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="9ec2c91c-44b5-488c-af0a-0f8d0cdfd9ca" class="govuk-link">Wokingham Core Strategy</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="">
+                    <a href="164953b0-78b8-44d6-a207-3fb2836c19e0" class="govuk-link">Worthing Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="8778ae29-5e6b-4fde-8245-e95b4574203a" class="govuk-link">Wycombe District Local Plan</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="12c83f26-092c-46db-95d0-7e79221d7799" class="govuk-link">Wyre Local Plan (2011-2031)</a>
+                </li>
+                
+                <li data-facet-search="item" data-number-of-documents="1" data-plan-status="adopted">
+                    <a href="ea1e8cf6-0017-412a-bacf-3816a3f8df5d" class="govuk-link">Yorkshire Dales National Park Local Plan 2015-2030</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </main>
+      </div>
+    
+
+    
+      <footer class="govuk-footer " role="contentinfo"
+        >
+  <div class="govuk-width-container ">
+    
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+        <svg
+          role="presentation"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+    <script src="https://digital-land.github.io/javascripts/dl-cookies.js"></script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- end google analytics -->
+	
+
+	<script src="https://digital-land.github.io/javascripts/govuk/govuk-frontend-3.0.0.min.js"></script>
+	<script>
+		// initiate all GOVUK components
+		window.GOVUKFrontend.initAll();
+	</script>
+
+	
+
+	
+	<script src="https://digital-land.github.io/javascripts/dl-frontend.js"></script>
+	<script>
+		// adds any necessary polyfills
+		window.DLFrontend.polyfill();
+	</script>
+	
+<script>
+    (function (DLFrontend) {
+  function convertNodeListToArray (nl) {
+    return Array.prototype.slice.call(nl)
+  }
+
+  // adapted from https://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case
+  function camelize (str) {
+    return str
+      .replace(/-/g, " ")
+      .replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+        if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
+        return index === 0 ? match.toLowerCase() : match.toUpperCase()
+      })
+  }
+
+  function FacetSearch ($list, $form) {
+    this.$list = $list
+    this.$form = $form
+    this.filterTimeout = null
+    this.$noMatches = document.querySelector('.js-no-filter-list-matches')
+  }
+
+  FacetSearch.prototype.init = function (params) {
+    this.setupOptions(params)
+    this.$currentCount = this.$list.querySelector(this.count_selector)
+    this.$items = this.allListItems()
+    this.filters = this.allFilters()
+
+    console.log('List items: ', this.$items.length)
+    console.log('Filters: ', this.filters)
+
+    const boundFilterListHandler = this.filterListHandler.bind(this)
+    this.$form.addEventListener('submit', boundFilterListHandler)
+    const boundResetHandler = this.resetHandler.bind(this)
+    this.$form.addEventListener('reset', boundResetHandler)
+  }
+
+  FacetSearch.prototype.allListItems = function () {
+    const $list = this.$list
+    var $items = $list.querySelectorAll('[data-facet-search="item"]')
+    return convertNodeListToArray($items)
+  }
+
+  FacetSearch.prototype.allFilters = function () {
+    const $form = this.$form
+    var filters = []
+    var $filters = convertNodeListToArray($form.querySelectorAll('[data-facet-search="filter"]'))
+    $filters.forEach(function ($filter) {
+      filters.push({
+        $element: $filter,
+        name: $filter.dataset.facetSearchName,
+        type: $filter.dataset.facetSearchType
+      })
+    })
+    return filters
+  }
+
+  FacetSearch.prototype.filterListHandler = function (e) {
+    e.preventDefault()
+    this.filterList()
+  }
+
+  FacetSearch.prototype.resetHandler = function (e) {
+    console.log('reset the form')
+    this.showAll()
+  }
+
+  FacetSearch.prototype.showAll = function () {
+    const $items = this.$items
+    $items.forEach(function ($item) {
+      $item.classList.remove('js-hidden')
+    })
+    this.updateCountDisplay($items.length)
+  }
+
+  FacetSearch.prototype.filterList = function () {
+    const filters = this.filters
+    const $items = this.$items
+    const that = this
+
+    // start with a full list of items
+    let filteredList = $items
+    $items.forEach(function ($item) {
+      $item.classList.add('js-hidden')
+    })
+    // go through a filter at a time
+    filters.forEach(function (filter) {
+      // only perform filter if there is something to filter
+      if (filteredList.length > 0) {
+        filteredList = that.performFilter(filteredList, filter)
+      }
+      // how many left
+      console.log("after filter: ", filteredList.length)
+    })
+
+    if (filteredList.length > 0) {
+      filteredList.forEach(function ($item) {
+        $item.classList.remove('js-hidden')
+      })
+    }
+
+    this.updateCountDisplay(filteredList.length)
+  }
+
+  FacetSearch.prototype.performFilter = function (list, filter) {
+    const that = this
+    // handle text input filters
+    if (filter.type === 'text') {
+      const $input = filter.$element.querySelector('input')
+      const _val = $input.value
+
+      if (_val !== '') {
+        return list.filter(function (i) {
+          return that.matchTextString(i, filter.name, _val)
+        })
+      }
+      return list
+    } else if (filter.type === 'radio') {
+      const checkedRadio = filter.$element.querySelector('input[type="radio"]:checked')
+      if (checkedRadio) {
+        const _val = checkedRadio.value
+        return list.filter(function (i) {
+          return that.matchTextString(i, filter.name, _val)
+        })
+      }
+    }
+    return list
+  }
+
+  FacetSearch.prototype.matchTextString = function ($item, propName, _val) {
+    if ($item.dataset[camelize(propName)].toString() === _val) {
+      return true
+    }
+    return false
+  }
+
+  FacetSearch.prototype.updateCountDisplay = function (count) {
+    this.$currentCount.textContent = count
+  }
+
+  FacetSearch.prototype.setupOptions = function (params) {
+    params = params || {}
+    this.total_count_selector = params.total_count_selector || '.facet-search__total-count'
+    this.count_selector = params.count_selector || '.facet-search__count'
+  }
+
+  DLFrontend.FacetSearch = FacetSearch
+})(DLFrontend)
+
+    const $form = document.querySelector('[data-facet-search="form"]');
+    const $list = document.querySelector('[data-facet-search="list"]');
+    new window.DLFrontend.FacetSearch($list, $form).init({})
+</script>
+
+
+
+  </body>
+</html>
