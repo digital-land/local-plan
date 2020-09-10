@@ -161,7 +161,8 @@
   }
 
   FacetSearch.prototype.uncheckAll = function ($formGroup) {
-    const $checkableEls = $formGroup.querySelectorAll('input[type="checkbox"]', 'input[type="radio"]')
+    console.log($formGroup)
+    const $checkableEls = $formGroup.querySelectorAll('input[type="checkbox"], input[type="radio"]')
     $checkableEls.forEach(function ($el) {
       $el.checked = false
     })
