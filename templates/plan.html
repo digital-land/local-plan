@@ -117,47 +117,49 @@
                 </dd>
             </div>
 
-
-            {% if plan['status'] %}
-            <div class="govuk-summary-list__row{% if plan['status']['current']['status'] == 'adopted' %} adopted-plan{% endif %}">
+            <div class="govuk-summary-list__row{% if plan['status'] and plan['status']['current']['status'] == 'adopted' %} adopted-plan{% endif %}">
                 <dt class="govuk-summary-list__key" style="border: none;">
                     Timeline
                 </dt>
                 <dd class="govuk-summary-list__value" style="border: none;">
-                    <div class="lp-pins-stages govuk-!-margin-bottom-8">
+                  {% if plan['status'] %}
+                  <div class="lp-pins-stages govuk-!-margin-bottom-8">
 
-                        <div class="lp-current-stage">
-                            <span class="lp-stage-tag">{{ plan['status']['current']['status'] }}</span>
-                            <span class="lp-stage-date">{{ plan['status']['current']['date'] }}</span>
-                        </div>
-                        <details class="govuk-details" role="group">
-                            <summary class="govuk-details__summary" role="button"
-                                aria-controls="details-content-a04329e1-9578-4f14-b979-529177b6985c"
-                                aria-expanded="false">
-                                <span class="govuk-details__summary-text">
-                                    PINS Timeline
-                                </span>
-                            </summary>
-                            <div class="govuk-details__text"
-                                id="details-content-a04329e1-9578-4f14-b979-529177b6985c"
-                                aria-hidden="true">
-                                <table class="govuk-table">
-                                    <tbody class="govuk-table__body">
-                                        {% for stage in plan['status']['timeline']  %}
-                                        <tr class="govuk-table__row">
-                                            <th class="govuk-table__cell" scope="row">{{ stage['development-plan-status'] }}</th>
-                                            <td class="govuk-table__cell">{{ stage['end-date'] }}</td>
-                                        </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                </table>
+                      <div class="lp-current-stage">
+                          <span class="lp-stage-tag">{{ plan['status']['current']['status'] }}</span>
+                          <span class="lp-stage-date">{{ plan['status']['current']['date'] }}</span>
+                      </div>
+                      <details class="govuk-details" role="group">
+                          <summary class="govuk-details__summary" role="button"
+                              aria-controls="details-content-a04329e1-9578-4f14-b979-529177b6985c"
+                              aria-expanded="false">
+                              <span class="govuk-details__summary-text">
+                                  PINS Timeline
+                              </span>
+                          </summary>
+                          <div class="govuk-details__text"
+                              id="details-content-a04329e1-9578-4f14-b979-529177b6985c"
+                              aria-hidden="true">
+                              <table class="govuk-table">
+                                  <tbody class="govuk-table__body">
+                                      {% for stage in plan['status']['timeline']  %}
+                                      <tr class="govuk-table__row">
+                                          <th class="govuk-table__cell" scope="row">{{ stage['development-plan-status'] }}</th>
+                                          <td class="govuk-table__cell">{{ stage['end-date'] }}</td>
+                                      </tr>
+                                      {% endfor %}
+                                  </tbody>
+                              </table>
 
-                            </div>
-                        </details>
-                    </div>
+                          </div>
+                      </details>
+                  </div>
+                  {%- else -%}
+                  <span class="govuk-tag govuk-tag--grey">Unknown</span>
+                  {% endif %}
                 </dd>
             </div>
-            {% endif %}
+            
         </dl>
 
     </div>
@@ -193,7 +195,7 @@
 <div id="associated-documents" class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <h2 class="govuk-heading-l">Associated documents</h2>
-    <p class="dl-small-text">There are number documents associated with this local plan.</p>
+    <p class="dl-small-text">There are {{plan["document"]|length}} document{{'s' if plan["document"]|length != 1}} associated with this local plan.</p>
   </div>
   <div class="govuk-grid-column-two-thirds">
     <ul class="govuk-list">
