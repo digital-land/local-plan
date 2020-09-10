@@ -88,7 +88,7 @@
         filteredList = that.performFilter(filteredList, filter)
       }
       // how many left
-      console.log("after filter: ", filteredList.length)
+      console.log('after filter by', filter.type, ' to ', filteredList.length)
     })
 
     if (filteredList.length > 0) {
@@ -104,6 +104,7 @@
     const that = this
     // handle text input filters
     if (filter.type === 'text') {
+      console.log('filter a text input')
       const $input = filter.$element.querySelector('input')
       const _val = $input.value
 
@@ -128,9 +129,11 @@
         checkedCheckboxes.forEach(function ($checkbox) {
           values.push($checkbox.value)
         })
-        return list.filter(function (i) {
-          return that.matchAnyValue(i, filter.name, values)
-        })
+        if (values.length) {
+          return list.filter(function (i) {
+            return that.matchAnyValue(i, filter.name, values)
+          })
+        }
       }
     }
     return list
