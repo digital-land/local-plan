@@ -42,6 +42,29 @@
         <h3 class="govuk-heading-m">Filters</h3>
         <form class="govuk-form" data-facet-search="form">
 
+            <div class="govuk-!-margin-bottom-6" data-module="selected-counter" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="is-joint-plan">
+                {% call dlfFilterGroup({
+                    "title": "Joint plan",
+                    "is_open": False,
+                    "selected": 0
+                }) %}
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="joint-yes" name="joint-plan" type="radio" value="true">
+                    <label class="govuk-label govuk-radios__label" for="joint-yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="joint-no" name="joint-plan" type="radio" value="false">
+                    <label class="govuk-label govuk-radios__label" for="joint-no">
+                      No
+                    </label>
+                  </div>
+                </div>
+                {% endcall %}
+            </div>
+
             <div class="govuk-!-margin-bottom-6" data-module="selected-counter" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="plan-status">
                 {% call dlfFilterGroup({
                     "title": "Status",
@@ -154,7 +177,8 @@
                         "data-number-of-documents": plan['document']|length,
                         "data-plan-status": currentStatus,
                         "data-organisation": plan['organisations'],
-                        "data-year-adopted": year if plan['status'] else ""
+                        "data-year-adopted": year if plan['status'] else "",
+                        "data-is-joint-plan": "true" if plan['organisations'].split(";")|length > 1 else "false"
                     },
                     "plan": plan
                 }) }}
