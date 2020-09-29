@@ -24,7 +24,8 @@ def render(path, template, **kwargs):
 multi_loader = jinja2.ChoiceLoader([
     jinja2.FileSystemLoader(searchpath="./templates"),
     jinja2.PrefixLoader({
-        'govuk-jinja-components': jinja2.PackageLoader('govuk_jinja_components')
+        'govuk-jinja-components': jinja2.PackageLoader('govuk_jinja_components'),
+        'digital-land-frontend': jinja2.PackageLoader('digital_land_frontend')
     })
 ])
 env = jinja2.Environment(loader=multi_loader)

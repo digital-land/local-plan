@@ -1,6 +1,6 @@
-{% extends "dlf-base.html" %}
-{% from "dl-macros/filter-group.html" import dlfFilterGroup %}
-{% from "dl-macros/helpers.html" import random_int %}
+{% extends "digital-land-frontend/dlf-base.html" %}
+{% from "digital-land-frontend/components/filter-group/macro.html" import dlFilterGroup %}
+{% from "digital-land-frontend/components/dl-helpers.html" import random_int %}
 
 {% from "local-plan-macros/local-plan-card.jinja" import localPlanCard %}
 
@@ -43,7 +43,7 @@
         <form class="govuk-form" data-facet-search="form">
 
             <div class="govuk-!-margin-bottom-6" data-module="selected-counter" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="is-joint-plan">
-                {% call dlfFilterGroup({
+                {% call dlFilterGroup({
                     "title": "Joint plan",
                     "is_open": False,
                     "selected": 0
@@ -66,7 +66,7 @@
             </div>
 
             <div class="govuk-!-margin-bottom-6" data-module="selected-counter" data-facet-search="filter" data-facet-search-type="radio" data-facet-search-name="plan-status">
-                {% call dlfFilterGroup({
+                {% call dlFilterGroup({
                     "title": "Status",
                     "is_open": False,
                     "selected": 0
@@ -101,7 +101,7 @@
             </div>
 
             <div class="govuk-form-group" data-facet-search="filter" data-facet-search-type="checkbox" data-facet-search-name="organisation">
-                {% call dlfFilterGroup({
+                {% call dlFilterGroup({
                     "title": "Organisation",
                     "is_open": False,
                     "selected": 0
