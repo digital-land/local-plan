@@ -9,7 +9,6 @@ from jinja_filters import map_organisation_id_filter, statistical_geography_code
 
 docs = "docs/"
 static_path = "https://digital-land.github.io" # use frontend assets we have published
-static_path = "https://digital-land-design.herokuapp.com/static"
 
 def render(path, template, **kwargs):
     path = os.path.join(docs, path)
