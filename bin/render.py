@@ -6,6 +6,7 @@ import jinja2
 from local_plans_data import get_local_plan_data
 from organisation import get_organisation_data, get_boundaries
 from jinja_filters import map_organisation_id_filter, statistical_geography_code
+from digital_land_frontend.jinja import setup_jinja
 
 docs = "docs/"
 static_path = "https://digital-land.github.io" # use frontend assets we have published
@@ -21,14 +22,7 @@ def render(path, template, **kwargs):
 
 
 # register templates
-multi_loader = jinja2.ChoiceLoader([
-    jinja2.FileSystemLoader(searchpath="./templates"),
-    jinja2.PrefixLoader({
-        'govuk-jinja-components': jinja2.PackageLoader('govuk_jinja_components'),
-        'digital-land-frontend': jinja2.PackageLoader('digital_land_frontend')
-    })
-])
-env = jinja2.Environment(loader=multi_loader)
+env = setup_jinja()
 
 # register jinja filters
 env.filters['map_organisation_by_id'] = map_organisation_id_filter
