@@ -9,20 +9,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     
-      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
-      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
-      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
-      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
-      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="shortcut icon" sizes="48x48" href="/images/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" sizes="32x32" href="/images/favicon-32x32.png" type="image/png">
+      <link rel="shortcut icon" sizes="16x16" href="/images/favicon-16x16.png" type="image/png">
+      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     
 
     
-<link href="https://digital-land.github.io/stylesheets/dl-frontend.css" rel="stylesheet" />
-
+	<link href="https://digital-land.github.io/stylesheets/dl-frontend.css" rel="stylesheet" />
+	
     
     
-    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+    <meta property="og:image" content="/images/govuk-opengraph-image.png">
   </head>
   <body class="govuk-template__body ">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
@@ -61,6 +60,8 @@
   </div>
 
 </div>
+
+
 <header role="banner" id="global-header" class="govuk-header  with-proposition dl-header" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="header-proposition">
@@ -69,7 +70,6 @@
         Digital Land
         </a>
         <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
-
         <nav>
           <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
             <li class="govuk-header__navigation-item">
@@ -98,10 +98,11 @@
             </li>
           </ul>
         </nav>
-      </div>
+        </div>
     </div>
   </div>
 </header>
+
 
 
     
@@ -246,13 +247,13 @@
                         <label for="input-f3852fb8" class="govuk-label govuk-visually-hidden">
                         Filter Show only
                         </label>
-                        <input name="option-select-filter" id="input-f3852fb8" class="govuk-input filter-group__auto-filter__input" type="text" aria-describedby="checkbox-filter-29106" aria-controls="checkboxes-33116">
+                        <input name="option-select-filter" id="input-f3852fb8" class="govuk-input filter-group__auto-filter__input" type="text" aria-describedby="checkbox-filter-72981" aria-controls="checkboxes-37938">
                     </div>
 
                     <div role="group">
-                        <span id="checkbox-filter-29106" class="filter-group__auto-filter__desc govuk-visually-hidden" aria-live="polite" data-single="option found" data-multiple="options found" data-selected="selected">How many showing</span>
+                        <span id="checkbox-filter-72981" class="filter-group__auto-filter__desc govuk-visually-hidden" aria-live="polite" data-single="option found" data-multiple="options found" data-selected="selected">How many showing</span>
                     
-                        <div id="checkboxes-33116" class="checkbox-list">
+                        <div id="checkboxes-37938" class="checkbox-list">
                             
                             <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="local-authority-1" name="org" type="checkbox" value="development-corporation:Q20648596">
@@ -16763,12 +16764,50 @@
     
 
     
-      <footer class="govuk-footer " role="contentinfo"
+  
+
+
+
+
+
+
+
+<footer class="govuk-footer " role="contentinfo"
         >
   <div class="govuk-width-container ">
     
     <div class="govuk-footer__meta">
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+              <ul class="govuk-footer__inline-list">
+                
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/cookies">
+                      Cookies
+                    </a>
+                  </li>
+                
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/accessibility-statement">
+                      Accessibility statement
+                    </a>
+                  </li>
+                
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/design-system">
+                      Design system
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          
+          
+            <div class="govuk-footer__meta-custom">
+              The <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">software</a> and <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">data</a> used to build these pages is <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/blob/master/LICENSE">open source</a>.
+            </div>
+          
         
         <svg
           role="presentation"
@@ -16802,7 +16841,7 @@
     </div>
   </div>
 </footer>
-    
+
 
     <script src="https://digital-land.github.io/javascripts/dl-cookies.js"></script>
 	<script async src='https://www.google-analytics.com/analytics.js'></script>
